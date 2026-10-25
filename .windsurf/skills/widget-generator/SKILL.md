@@ -1,11 +1,11 @@
 ---
 name: widget-generator
-description: Generate customizable widget plugins for the prompts.chat feed system
+description: Generate customizable widget plugins for the HBB Prompts feed system
 ---
 
 # Widget Generator Skill
 
-This skill guides creation of widget plugins for **prompts.chat**. Widgets are injected into prompt feeds to display promotional content, sponsor cards, or custom interactive components.
+This skill guides creation of widget plugins for **HBB Prompts**. Widgets are injected into prompt feeds to display promotional content, sponsor cards, or custom interactive components.
 
 ## Overview
 

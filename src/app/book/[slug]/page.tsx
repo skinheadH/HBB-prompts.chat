@@ -46,15 +46,15 @@ export async function generateMetadata({ params }: ChapterPageProps): Promise<Me
       chapter.part.toLowerCase(),
       "prompting techniques",
     ],
-    authors: [{ name: "Fatih Kadir Akın", url: "https://github.com/f" }],
+    authors: [{ name: "HBB", url: "https://github.com/skinheadH" }],
     openGraph: {
       title,
       description,
       url: `/book/${slug}`,
-      siteName: "prompts.chat",
+      siteName: "HBB Prompts",
       images: [
         {
-          url: "https://prompts.chat/book-cover-photo.jpg",
+          url: "/book-cover-photo.jpg",
           width: 1200,
           height: 630,
           alt: `${chapter.title} - Prompt Engineering Guide`,
@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: ChapterPageProps): Promise<Me
       card: "summary_large_image",
       title,
       description,
-      images: ["https://prompts.chat/book-cover-photo.jpg"],
+      images: ["/book-cover-photo.jpg"],
     },
     alternates: {
       canonical: `/book/${slug}`,
@@ -179,8 +179,8 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
             description: chapter.description,
             url: absoluteUrl(`/book/${slug}`),
             inLanguage: "en",
-            author: { "@type": "Person", name: "Fatih Kadir Akın", url: "https://github.com/f" },
-            publisher: { "@type": "Organization", name: "prompts.chat", url: absoluteUrl("/") },
+            author: { "@type": "Person", name: "HBB", url: "https://github.com/skinheadH" },
+            publisher: { "@type": "Organization", name: "HBB Prompts", url: absoluteUrl("/") },
             image: absoluteUrl("/book-cover-photo.jpg"),
             isAccessibleForFree: true,
             license: "https://creativecommons.org/publicdomain/zero/1.0/",

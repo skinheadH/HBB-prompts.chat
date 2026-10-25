@@ -1,18 +1,18 @@
 # Owners
 
-This file lists the current maintainers and emeritus maintainers of prompts.chat.
+This file lists the current maintainers and emeritus maintainers of HBB Prompts (forked from f/prompts.chat).
 
 ## Project Lead
 
 | Name | GitHub | Affiliation |
 |------|--------|-------------|
-| Fatih Kadir Akin | [@f](https://github.com/f) | Independent |
+| HBB | [@skinheadH](https://github.com/skinheadH) | Independent |
 
 ## Maintainers
 
 | Name | GitHub | Affiliation | Since |
 |------|--------|-------------|-------|
-| Fatih Kadir Akin | [@f](https://github.com/f) | Independent | Dec 2022 |
+| HBB | [@skinheadH](https://github.com/skinheadH) | Independent | Oct 2026 |
 
 ## Emeritus Maintainers
 

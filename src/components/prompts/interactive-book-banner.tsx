@@ -54,7 +54,7 @@ export function InteractiveBookBanner() {
       <div className="flex flex-col sm:flex-row items-center gap-6">
         {/* 3D Book */}
         <Link
-          href="https://fka.gumroad.com/l/art-of-chatgpt-prompting"
+          href="/book"
           className="shrink-0"
           style={{ perspective: "800px" }}
         >
@@ -131,7 +131,7 @@ export function InteractiveBookBanner() {
             {t("description")}
           </p>
           <Button asChild size="sm">
-            <Link href="https://fka.gumroad.com/l/art-of-chatgpt-prompting">
+            <Link href="/book">
               <BookOpen className="mr-2 h-4 w-4" />
               {t("cta")}
               <ArrowRight className="ml-2 h-4 w-4" />

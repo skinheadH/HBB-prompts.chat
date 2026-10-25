@@ -22,7 +22,7 @@ import { getLocaleData, type LocaleData } from '../src/components/book/elements/
 const BOOK_DIR = path.join(process.cwd(), 'src/content/book');
 const MESSAGES_DIR = path.join(process.cwd(), 'messages');
 const OUTPUT_DIR = path.join(process.cwd(), 'public/book-pdf');
-const SITE_URL = 'https://prompts.chat';
+const SITE_URL = 'https://github.com/skinheadH/HBB-prompts.chat';
 
 // Print-ready mode flag (set by --print CLI argument)
 const PRINT_READY = process.argv.includes('--print');
@@ -4196,10 +4196,10 @@ function generateHtmlDocument(chapters: ProcessedChapter[], locale: string, mess
     <h1>${title}</h1>
     <p class="subtitle">${subtitle}</p>
     <div class="cover-author">
-      <img class="cover-avatar" src="https://github.com/f.png" alt="Fatih Kadir Akın" />
+      <img class="cover-avatar" src="https://github.com/skinheadH.png" alt="HBB" />
       <div class="cover-author-info">
-        <span class="author-name">Fatih Kadir Akın</span>
-        <span class="author-desc">Creator of prompts.chat, GitHub Star</span>
+        <span class="author-name">HBB</span>
+        <span class="author-desc">Creator of HBB Prompts</span>
       </div>
     </div>
     <p class="url">${SITE_URL}/book</p>
@@ -4241,7 +4241,7 @@ function generateHtmlDocument(chapters: ProcessedChapter[], locale: string, mess
     <p style="margin-top: 1.5em;">If you found this book helpful, consider sharing it with others or contributing to the open-source project on GitHub.</p>
     <div class="colophon">
       <p>${title}</p>
-      <p>© ${new Date().getFullYear()} Fatih Kadir Akın — prompts.chat</p>
+      <p>© ${new Date().getFullYear()} HBB — HBB Prompts</p>
       <p style="margin-top: 0.6em;">
         Set in Palatino and Helvetica Neue. 6″ × 9″
       </p>

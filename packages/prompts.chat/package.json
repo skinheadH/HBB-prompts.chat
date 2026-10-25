@@ -62,10 +62,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/f/prompts.chat"
+    "url": "https://github.com/skinheadH/HBB-prompts.chat"
   },
-  "homepage": "https://prompts.chat",
-  "author": "Fatih Kadir Akın <fatihkadirakin@gmail.com>",
+  "homepage": "https://github.com/skinheadH/HBB-prompts.chat",
+  "author": "HBB <84764128+skinheadH@users.noreply.github.com>",
   "license": "MIT",
   "engines": {
     "node": ">=18"

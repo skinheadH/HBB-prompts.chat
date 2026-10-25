@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { PixelRobot } from "@/components/kids/elements/pixel-art";
 import { getTranslations, getLocale } from "next-intl/server";
 import { ContinueReadingButton } from "@/components/book/continue-reading";
+import { absoluteUrl } from "@/lib/seo";
 
 const kidsFont = Schoolbell({
   subsets: ["latin"],
@@ -38,17 +39,17 @@ export async function generateMetadata(): Promise<Metadata> {
       "Claude prompts",
       "AI communication",
     ],
-    authors: [{ name: "Fatih Kadir Akın", url: "https://github.com/f" }],
-    creator: "Fatih Kadir Akın",
-    publisher: "prompts.chat",
+    authors: [{ name: "HBB", url: "https://github.com/skinheadH" }],
+    creator: "HBB",
+    publisher: "HBB Prompts",
     openGraph: {
       title,
       description,
       url: "/book",
-      siteName: "prompts.chat",
+      siteName: "HBB Prompts",
       images: [
         {
-          url: "https://prompts.chat/book-cover-photo.jpg",
+          url: "/book-cover-photo.jpg",
           width: 1200,
           height: 630,
           alt: title,
@@ -61,8 +62,8 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: ["https://prompts.chat/book-cover-photo.jpg"],
-      creator: "@fkadev",
+      images: ["/book-cover-photo.jpg"],
+      creator: "@skinheadH",
     },
     alternates: {
       canonical: "/book",
@@ -90,16 +91,16 @@ const jsonLd = {
   description: "Master AI prompt engineering with this free, interactive guide. Learn ChatGPT prompts, chain-of-thought reasoning, few-shot learning, and advanced techniques.",
   author: {
     "@type": "Person",
-    name: "Fatih Kadir Akın",
-    url: "https://github.com/f",
+    name: "HBB",
+    url: "https://github.com/skinheadH",
   },
   publisher: {
     "@type": "Organization",
-    name: "prompts.chat",
-    url: "https://prompts.chat",
+    name: "HBB Prompts",
+    url: "https://github.com/skinheadH/HBB-prompts.chat",
   },
-  url: "https://prompts.chat/book",
-  image: "https://prompts.chat/book-cover-photo.jpg",
+  url: absoluteUrl("/book"),
+  image: absoluteUrl("/book-cover-photo.jpg"),
   inLanguage: "en",
   genre: ["Technology", "Education", "Artificial Intelligence"],
   about: {
@@ -152,7 +153,7 @@ export default async function BookHomePage() {
       {/* Book Cover Header */}
       <div className="mb-10">
         <p className="text-sm text-muted-foreground mb-4">{t("interactiveGuideBy")}</p>
-        <h2 className="text-lg font-medium mb-6">Fatih Kadir Akın</h2>
+        <h2 className="text-lg font-medium mb-6">HBB</h2>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
           {t("title")}
         </h1>
@@ -166,7 +167,7 @@ export default async function BookHomePage() {
         <p>
           {t.rich("authorIntro", {
             author: (chunks) => <strong className="text-foreground">{chunks}</strong>,
-            repoLink: (chunks) => <a href="https://github.com/f/prompts.chat" className="text-primary hover:underline">{chunks}</a>,
+            repoLink: (chunks) => <a href="https://github.com/skinheadH/HBB-prompts.chat" className="text-primary hover:underline">{chunks}</a>,
             siteName: (chunks) => <strong className="text-foreground">{chunks}</strong>,
           })}
         </p>
@@ -217,7 +218,7 @@ export default async function BookHomePage() {
           </Link>
         </Button>
         <Button asChild variant="outline" size="lg">
-          <a href={`https://raw.githubusercontent.com/f/prompts.chat/refs/heads/main/public/book-pdf/book-${locale}-print.pdf`} download>
+          <a href={`https://raw.githubusercontent.com/skinheadH/HBB-prompts.chat/refs/heads/main/public/book-pdf/book-${locale}-print.pdf`} download>
             <Download className="mr-2 h-4 w-4" />
             {t("downloadPdf")}
           </a>
@@ -260,7 +261,7 @@ export default async function BookHomePage() {
       <div className="mt-12 pt-6 border-t text-sm text-muted-foreground">
         <p>
           {t.rich("partOfProject", {
-            repoLink: (chunks) => <a href="https://github.com/f/prompts.chat" className="text-primary hover:underline">{chunks}</a>,
+            repoLink: (chunks) => <a href="https://github.com/skinheadH/HBB-prompts.chat" className="text-primary hover:underline">{chunks}</a>,
           })}
         </p>
       </div>

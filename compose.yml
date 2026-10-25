@@ -17,7 +17,7 @@ services:
       start_period: 10s
 
   app:
-    image: ghcr.io/f/prompts.chat:latest
+    image: ghcr.io/skinheadH/prompts.chat:latest # published by .github/workflows/docker-publish.yml on push to main
     # By default, uses the pre-built image above. To build locally instead,
     # run: docker compose up -d --build
     build:

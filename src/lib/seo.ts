@@ -27,7 +27,7 @@ export const NOINDEX_ROBOTS: Metadata["robots"] = {
  * Returns the absolute site origin without a trailing slash
  */
 export function getBaseUrl(): string {
-  return (process.env.NEXTAUTH_URL || "https://prompts.chat").replace(/\/+$/, "");
+  return (process.env.NEXTAUTH_URL || "http://localhost:3000").replace(/\/+$/, "");
 }
 
 /**
@@ -101,7 +101,7 @@ export function toSitemapImageUrl(mediaUrl: string): string | null {
 }
 
 interface PageMetadataOptions {
-  /** Page title. The "| prompts.chat" suffix is added by the root title template. */
+  /** Page title. The "| HBB Prompts" suffix is added by the root title template. */
   title: string;
   description: string;
   /** Canonical path relative to the site root, e.g. "/categories/coding" */
@@ -150,7 +150,7 @@ export function buildPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      site: "@promptschat",
+      site: "@skinheadH",
       title: socialTitle,
       description,
       ...(images && { images: images.map((img) => img.url) }),

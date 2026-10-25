@@ -25,16 +25,8 @@ npx taste push --all
 ## Pull taste from remote
 npx taste pull username/project-name`,
       type: "TEXT",
-      sponsor: {
-        name: "CommandCode",
-        logo: "/sponsors/commandcode.svg",
-        logoDark: "/sponsors/commandcode-dark.svg",
-        url: "https://commandcode.ai",
-      },
       tags: ["Coding Agents", "Developer Tools", "AI Agents"],
       category: "Development",
-      actionUrl: "https://commandcode.ai",
-      actionLabel: "Try CommandCode",
       positioning: {
         position: 2,
         mode: "repeat",

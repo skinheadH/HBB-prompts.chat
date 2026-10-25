@@ -1566,7 +1566,7 @@
     "releasedOn": "5 december 2022",
     "storyTitle": "Ons verhaal",
     "goalTitle": "Ons doel",
-    "story1Rich": "prompts.chat is de webvisualisatie van de <repoLink>Awesome ChatGPT Prompts</repoLink> repository. Het begon als een persoonlijk project van <authorLink>@f</authorLink> om ChatGPT-prompts georganiseerd te houden, toen ChatGPT nog geen geschiedenisfunctie had in de eerste versie.",
+    "story1Rich": "prompts.chat is de webvisualisatie van de <repoLink>Awesome ChatGPT Prompts</repoLink> repository. Het begon als een persoonlijk project van <authorLink>@skinheadH</authorLink> om ChatGPT-prompts georganiseerd te houden, toen ChatGPT nog geen geschiedenisfunctie had in de eerste versie.",
     "story2": "De Awesome ChatGPT Prompts repository werd gemaakt op 5 december 2022, slechts 2 weken nadat ChatGPT voor het eerst aan de wereld werd aangekondigd. Wat begon als een simpele oplossing werd de go-to bron voor miljoenen AI-enthousiastelingen.",
     "testimonialsRich": "Geliefd bij AI-pioniers, waaronder OpenAI mede-oprichters <gregLink>Greg Brockman</gregLink> en <wojciechLink>Wojciech Zaremba</wojciechLink>.",
     "openSource": "Volledig gratis en open source vanaf dag één.",
@@ -1869,7 +1869,7 @@
     "metaTitle": "Gids voor prompt engineering: Het Interactieve Prompting Boek",
     "metaDescription": "Beheers AI prompt engineering met deze gratis interactieve gids. Leer ChatGPT prompts, chain-of-thought redeneren, few-shot leren en geavanceerde technieken. 29+ hoofdstukken met echte voorbeelden.",
     "interactiveGuideBy": "Een Interactieve Gids door",
-    "authorIntro": "Hallo, ik ben <author>Fatih Kadir Akın</author>, de curator van de populaire <repoLink>Awesome ChatGPT Prompts</repoLink> repository op GitHub en <siteName>prompts.chat</siteName>.",
+    "authorIntro": "Hallo, ik ben <author>HBB</author>, de curator van de populaire <repoLink>Awesome ChatGPT Prompts</repoLink> repository op GitHub en <siteName>prompts.chat</siteName>.",
     "bookDescription": "In deze uitgebreide, interactieve gids ontdek je expertstrategieën voor het maken van overtuigende AI-prompts die boeiende en effectieve gesprekken genereren. Van het begrijpen hoe AI-modellen werken tot het beheersen van geavanceerde technieken zoals prompt chaining en agentische systemen, dit boek geeft je de tools om je AI-interacties naar een hoger niveau te tillen.",
     "whatYouWillLearn": "Wat je zult leren:",
     "highlights": {

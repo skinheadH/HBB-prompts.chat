@@ -1566,7 +1566,7 @@
     "releasedOn": "2022년 12월 5일",
     "storyTitle": "우리의 이야기",
     "goalTitle": "우리의 목표",
-    "story1Rich": "prompts.chat은 <repoLink>Awesome ChatGPT Prompts</repoLink> 저장소의 웹 시각화입니다. ChatGPT 초기 버전에 기록 기능이 없었을 때, <authorLink>@f</authorLink>가 프롬프트를 정리하기 위해 시작한 개인 프로젝트였습니다.",
+    "story1Rich": "prompts.chat은 <repoLink>Awesome ChatGPT Prompts</repoLink> 저장소의 웹 시각화입니다. ChatGPT 초기 버전에 기록 기능이 없었을 때, <authorLink>@skinheadH</authorLink>가 프롬프트를 정리하기 위해 시작한 개인 프로젝트였습니다.",
     "story2": "Awesome ChatGPT Prompts 저장소는 2022년 12월 5일, ChatGPT가 세상에 발표된 지 불과 2주 만에 만들어졌습니다. 간단한 솔루션으로 시작한 것이 수백만 AI 애호가들의 필수 리소스가 되었습니다.",
     "testimonialsRich": "AI 선구자들의 사랑을 받고 있습니다. OpenAI 공동 창립자 <gregLink>Greg Brockman</gregLink>과 <wojciechLink>Wojciech Zaremba</wojciechLink>도 포함됩니다.",
     "openSource": "첫날부터 완전히 무료이고 오픈 소스입니다.",
@@ -1869,7 +1869,7 @@
     "metaTitle": "프롬프트 엔지니어링 가이드: 인터랙티브 프롬프팅 북",
     "metaDescription": "이 무료 인터랙티브 가이드로 AI 프롬프트 엔지니어링을 마스터하세요. ChatGPT 프롬프트, 사고의 사슬 추론, Few-Shot 학습 및 고급 기술을 배우세요. 실제 예제가 포함된 29개 이상의 챕터.",
     "interactiveGuideBy": "인터랙티브 가이드 by",
-    "authorIntro": "안녕하세요, 저는 <author>Fatih Kadir Akın</author>입니다. GitHub의 인기 <repoLink>Awesome ChatGPT Prompts</repoLink> 저장소와 <siteName>prompts.chat</siteName>의 큐레이터입니다.",
+    "authorIntro": "안녕하세요, 저는 <author>HBB</author>입니다. GitHub의 인기 <repoLink>Awesome ChatGPT Prompts</repoLink> 저장소와 <siteName>prompts.chat</siteName>의 큐레이터입니다.",
     "bookDescription": "이 포괄적인 인터랙티브 가이드에서 매력적이고 효과적인 대화를 생성하는 설득력 있는 AI 프롬프트를 만들기 위한 전문 전략을 발견할 수 있습니다. AI 모델의 작동 방식 이해부터 프롬프트 체이닝 및 에이전트 시스템과 같은 고급 기술 습득까지, 이 책은 AI 상호작용을 다음 단계로 끌어올리는 데 필요한 도구를 제공합니다.",
     "whatYouWillLearn": "배우게 될 내용:",
     "highlights": {

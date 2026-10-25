@@ -1566,7 +1566,7 @@
     "releasedOn": "5 Δεκεμβρίου 2022",
     "storyTitle": "Η Ιστορία μας",
     "goalTitle": "Ο Στόχος μας",
-    "story1Rich": "Το prompts.chat είναι η web οπτικοποίηση του αποθετηρίου <repoLink>Awesome ChatGPT Prompts</repoLink>. Ξεκίνησε ως προσωπικό έργο του <authorLink>@f</authorLink> για την οργάνωση prompts ChatGPT, όταν το ChatGPT δεν είχε λειτουργία ιστορικού στην αρχική του έκδοση.",
+    "story1Rich": "Το prompts.chat είναι η web οπτικοποίηση του αποθετηρίου <repoLink>Awesome ChatGPT Prompts</repoLink>. Ξεκίνησε ως προσωπικό έργο του <authorLink>@skinheadH</authorLink> για την οργάνωση prompts ChatGPT, όταν το ChatGPT δεν είχε λειτουργία ιστορικού στην αρχική του έκδοση.",
     "story2": "Το αποθετήριο Awesome ChatGPT Prompts δημιουργήθηκε στις 5 Δεκεμβρίου 2022, μόλις 2 εβδομάδες μετά την ανακοίνωση του ChatGPT στον κόσμο. Αυτό που ξεκίνησε ως μια απλή λύση έγινε ο κύριος πόρος για εκατομμύρια λάτρεις της AI.",
     "testimonialsRich": "Αγαπητό από πρωτοπόρους της AI, συμπεριλαμβανομένων των συνιδρυτών της OpenAI <gregLink>Greg Brockman</gregLink> και <wojciechLink>Wojciech Zaremba</wojciechLink>.",
     "openSource": "Εντελώς δωρεάν και ανοιχτού κώδικα από την πρώτη μέρα.",
@@ -1869,7 +1869,7 @@
     "metaTitle": "Οδηγός Prompt Engineering: Το Διαδραστικό Βιβλίο Prompting",
     "metaDescription": "Κατακτήστε το AI prompt engineering με αυτόν τον δωρεάν διαδραστικό οδηγό. Μάθετε ChatGPT prompts, αλυσίδα σκέψης, few-shot μάθηση και προηγμένες τεχνικές. 29+ κεφάλαια με πραγματικά παραδείγματα.",
     "interactiveGuideBy": "Ένας Διαδραστικός Οδηγός από",
-    "authorIntro": "Γεια, είμαι ο <author>Fatih Kadir Akın</author>, επιμελητής του δημοφιλούς αποθετηρίου <repoLink>Awesome ChatGPT Prompts</repoLink> στο GitHub και του <siteName>prompts.chat</siteName>.",
+    "authorIntro": "Γεια, είμαι ο <author>HBB</author>, επιμελητής του δημοφιλούς αποθετηρίου <repoLink>Awesome ChatGPT Prompts</repoLink> στο GitHub και του <siteName>prompts.chat</siteName>.",
     "bookDescription": "Σε αυτόν τον ολοκληρωμένο, διαδραστικό οδηγό, θα ανακαλύψετε ειδικές στρατηγικές για τη δημιουργία πειστικών AI prompts που δημιουργούν ελκυστικές και αποτελεσματικές συνομιλίες. Από την κατανόηση του τρόπου λειτουργίας των AI μοντέλων έως την εκμάθηση προηγμένων τεχνικών όπως η αλυσίδα prompts και τα πρακτορικά συστήματα, αυτό το βιβλίο σας δίνει τα εργαλεία για να αναβαθμίσετε τις AI αλληλεπιδράσεις σας.",
     "whatYouWillLearn": "Τι θα μάθετε:",
     "highlights": {

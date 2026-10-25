@@ -24,11 +24,10 @@
 **Requirements:**
 - **Plan:** Free and open-source (CC0 license)
 - **User Permissions:** No account needed to browse; sign in via GitHub/Google to create & save prompts
-- **Availability:** Generally Available at [prompts.chat](https://prompts.chat)
 
 ---
 
-This guide explains how to deploy **prompts.chat** on your own private server for enhanced privacy and customization.
+This guide explains how to deploy **HBB Prompts** on your own private server for enhanced privacy and customization.
 
 ## Prerequisites
 
@@ -38,18 +37,7 @@ This guide explains how to deploy **prompts.chat** on your own private server fo
 
 ## Recommended Database
 
-prompts.chat requires PostgreSQL. For a hosted PostgreSQL database, we recommend [Neon](https://get.neon.com/VqfnMo4): it provides serverless Postgres, connection pooling, and branching that work well for self-hosted prompts.chat deployments.
-
-<div>
-  <p>Sponsored by</p>
-  <a href="https://get.neon.com/VqfnMo4">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/f/prompts.chat/main/public/sponsors/neon-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/f/prompts.chat/main/public/sponsors/neon.svg">
-      <img width="250px" alt="Neon Logo fallback" src="https://raw.githubusercontent.com/f/prompts.chat/main/public/sponsors/neon-dark.svg">
-    </picture>
-  </a>
-</div>
+HBB Prompts requires PostgreSQL. For a hosted PostgreSQL database, [Neon](https://neon.com) provides serverless Postgres, connection pooling, and branching that work well for self-hosted deployments.
 
 ## Environment Variables
 
@@ -79,7 +67,7 @@ OPENAI_API_KEY="your-openai-api-key"
 
 ### Quick Start (Recommended)
 
-The fastest way to create a new prompts.chat instance:
+The fastest way to create a new HBB Prompts instance:
 
 ```bash
 npx prompts.chat new my-prompt-library
@@ -95,8 +83,8 @@ This will:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/f/prompts.chat.git
-   cd prompts.chat
+   git clone https://github.com/skinheadH/HBB-prompts.chat.git
+   cd HBB-prompts.chat
    ```
 
 2. **Install dependencies**
@@ -147,7 +135,7 @@ This will:
 The setup wizard (`npm run setup`) generates `prompts.config.ts` automatically. You can also manually edit it:
 
 ```typescript
-// Set to true to use your own branding instead of prompts.chat branding
+// Set to true to use your own branding instead of upstream branding
 const useCloneBranding = true;
 
 export default defineConfig({
@@ -187,10 +175,10 @@ export default defineConfig({
   homepage: {
     useCloneBranding,  // Use your branding on homepage
     achievements: {
-      enabled: !useCloneBranding,  // Hide prompts.chat achievements
+      enabled: !useCloneBranding,  // Hide upstream achievements
     },
     sponsors: {
-      enabled: !useCloneBranding,  // Hide prompts.chat sponsors
+      enabled: !useCloneBranding,  // Hide upstream sponsors
     },
   },
 
@@ -213,8 +201,8 @@ When `useCloneBranding` is set to `true`, the homepage will:
 - Hide the achievements section (Forbes, GitHub stars, etc.)
 - Hide the sponsor links and "Become a Sponsor" CTA
 
-This is ideal for organizations that want to deploy their own white-labeled prompt library without prompts.chat branding.
+This is ideal for organizations that want to deploy their own white-labeled prompt library without upstream branding.
 
 ## Support
 
-For issues and questions, please open a [GitHub Issue](https://github.com/f/prompts.chat/issues).
+For issues and questions, please open a [GitHub Issue](https://github.com/skinheadH/HBB-prompts.chat/issues).

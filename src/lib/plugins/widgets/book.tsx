@@ -52,7 +52,7 @@ function BookWidget() {
       <div className="flex flex-col items-center gap-4">
         {/* Perspective container */}
         <Link 
-          href="https://fka.gumroad.com/l/art-of-chatgpt-prompting" 
+          href="/book" 
           className="block"
           style={{ perspective: "800px" }}
         >
@@ -128,7 +128,7 @@ function BookWidget() {
             Master AI prompting with 29 interactive chapters.
           </p>
           <Button asChild size="sm" className="w-full">
-            <Link href="https://fka.gumroad.com/l/art-of-chatgpt-prompting">
+            <Link href="/book">
               Start Reading
               <ArrowRight className="ml-2 h-3.5 w-3.5" />
             </Link>
@@ -152,7 +152,7 @@ export const bookWidget: WidgetPlugin = {
       type: "TEXT",
       tags: ["Prompting", "AI", "Guide", "Learning"],
       category: "Education",
-      actionUrl: "https://fka.gumroad.com/l/art-of-chatgpt-prompting",
+      actionUrl: "/book",
       actionLabel: "Read the Book",
       positioning: {
         position: 10,

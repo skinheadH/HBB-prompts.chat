@@ -228,7 +228,7 @@ export default function PresentationPage() {
           <Link href="/discover">
             <Button size="lg" className="text-lg px-8 py-6 rounded-xl">Explore Prompts</Button>
           </Link>
-          <Link href="https://github.com/fka/awesome-chatgpt-prompts" target="_blank">
+          <Link href="https://github.com/skinheadH/HBB-prompts.chat" target="_blank">
             <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-xl">Star on GitHub</Button>
           </Link>
         </div>

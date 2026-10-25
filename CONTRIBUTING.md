@@ -1,15 +1,16 @@
 # Contribution Guidelines
 
-Thank you for your interest in contributing to Awesome ChatGPT Prompts! 
+Thank you for your interest in contributing to HBB Prompts!
 
 ## How to Contribute
 
-The easiest way to contribute is through **[prompts.chat](https://prompts.chat)**:
+This fork does not run the upstream prompts.chat web sync pipeline, so contributions go through standard GitHub flow:
 
-1. Visit [prompts.chat](https://prompts.chat)
-2. Sign in with your GitHub account
-3. Create and submit your prompt
-4. Your contribution will automatically sync to this repository
+1. Fork the repository
+2. Create a branch for your changes
+3. Submit a pull request with a descriptive title and explanation
+
+If you run your own instance with the web platform enabled, you can also submit prompts through your deployment's `/prompts/new` page — they are stored in your own database.
 
 Your GitHub username will be credited as the contributor, and you'll appear in the repository's contributors list.
 
@@ -32,8 +33,8 @@ For bug fixes, documentation improvements, or other non-prompt contributions:
 
 ## Questions & Issue Policy
 
-Open an issue if you have questions about contributing. 
+Open an issue if you have questions about contributing.
 
-**Important:** This repository is strictly for AI prompts. 
+**Important:** This repository is strictly for AI prompts.
 - Do **not** post advertisements.
 - Any off-topic issues will be closed immediately, and the posting user will be reported to GitHub for spam and malicious activity.

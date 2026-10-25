@@ -7,7 +7,7 @@
 - Use Node.js version 24 in GitHub Actions workflows (not 20). Confidence: 0.65
 
 # project
-- This project is **prompts.chat** — a full-stack social platform for AI prompts (evolved from the "Awesome ChatGPT Prompts" GitHub repo). Confidence: 0.95
+- This project is **HBB Prompts** — a full-stack social platform for AI prompts (evolved from the "Awesome ChatGPT Prompts" GitHub repo). Confidence: 0.95
 - Package manager is npm (not pnpm or yarn). Confidence: 0.95
 
 # architecture

@@ -1566,7 +1566,7 @@
     "releasedOn": "2022年12月5日",
     "storyTitle": "私たちの物語",
     "goalTitle": "私たちの目標",
-    "story1Rich": "prompts.chatは<repoLink>Awesome ChatGPT Prompts</repoLink>リポジトリのウェブ版です。ChatGPTの初期バージョンに履歴機能がなかった頃、<authorLink>@f</authorLink>がプロンプトを整理するために始めた個人プロジェクトでした。",
+    "story1Rich": "prompts.chatは<repoLink>Awesome ChatGPT Prompts</repoLink>リポジトリのウェブ版です。ChatGPTの初期バージョンに履歴機能がなかった頃、<authorLink>@skinheadH</authorLink>がプロンプトを整理するために始めた個人プロジェクトでした。",
     "story2": "Awesome ChatGPT Promptsリポジトリは2022年12月5日、ChatGPTが世界に発表されてからわずか2週間後に作成されました。シンプルな解決策として始まったものが、数百万のAI愛好家のための主要なリソースとなりました。",
     "testimonialsRich": "AIパイオニアから愛されています。OpenAI共同創設者の<gregLink>Greg Brockman</gregLink>と<wojciechLink>Wojciech Zaremba</wojciechLink>も含まれます。",
     "openSource": "初日から完全に無料でオープンソース。",
@@ -1869,7 +1869,7 @@
     "metaTitle": "プロンプトエンジニアリングガイド：インタラクティブ・プロンプティングブック",
     "metaDescription": "この無料インタラクティブガイドでAIプロンプトエンジニアリングをマスターしましょう。ChatGPTプロンプト、Chain-of-Thought推論、Few-Shot学習、高度なテクニックを学べます。実例付き29以上のチャプター。",
     "interactiveGuideBy": "インタラクティブガイド by",
-    "authorIntro": "こんにちは、<author>Fatih Kadir Akın</author>です。GitHubで人気の<repoLink>Awesome ChatGPT Prompts</repoLink>リポジトリと<siteName>prompts.chat</siteName>のキュレーターです。",
+    "authorIntro": "こんにちは、<author>HBB</author>です。GitHubで人気の<repoLink>Awesome ChatGPT Prompts</repoLink>リポジトリと<siteName>prompts.chat</siteName>のキュレーターです。",
     "bookDescription": "この包括的でインタラクティブなガイドでは、魅力的で効果的な会話を生み出す説得力のあるAIプロンプトを作成するための専門家の戦略を発見できます。AIモデルの仕組みの理解から、プロンプトチェーニングやエージェントシステムなどの高度なテクニックの習得まで、この本はAIインタラクションを次のレベルに引き上げるために必要なツールを提供します。",
     "whatYouWillLearn": "学べること：",
     "highlights": {

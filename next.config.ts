@@ -97,7 +97,7 @@ const nextConfig: NextConfig = {
       // Redirect book PDF downloads to GitHub raw to save Vercel edge bandwidth
       {
         source: "/book-pdf/:filename",
-        destination: "https://raw.githubusercontent.com/f/prompts.chat/refs/heads/main/public/book-pdf/:filename",
+        destination: "https://raw.githubusercontent.com/skinheadH/HBB-prompts.chat/refs/heads/main/public/book-pdf/:filename",
         permanent: false,
       },
     ];
@@ -124,7 +124,7 @@ export default withSentryConfig(withMDX(withNextIntl(nextConfig)), {
   // tunnelRoute removed — was proxying all browser Sentry events through Vercel edge,
   // generating unnecessary edge requests ($2.45/M) and function invocations ($0.60/M).
   // Estimated savings: $100-400/month. Trade-off: some ad-blockers may block direct Sentry calls.
-  // See: https://github.com/f/prompts.chat/issues/1085
+  // See: https://github.com/skinheadH/HBB-prompts.chat/issues/1085
 
   webpack: {
     // Enables automatic instrumentation of Vercel Cron Monitors. (Does not yet work with App Router route handlers.)

@@ -1,20 +1,16 @@
 import { defineConfig } from "@/lib/config";
 
-// Set to true to use clone branding (hide prompts.chat repo branding)
-const useCloneBranding = false;
+// Set to true to use clone branding (hide upstream prompts.chat repo branding)
+const useCloneBranding = true;
 
 export default defineConfig({
   // Branding - customize for white-label
   branding: {
-    name: "prompts.chat",
+    name: "HBB Prompts",
     logo: "/logo.svg",
     logoDark: "/logo-dark.svg",
     favicon: "/logo.svg",
-    description: "Collect, organize, and share AI prompts",
-
-    // Delete this if useCloneBranding is true
-    appStoreUrl: "https://apps.apple.com/tr/app/prompts-chat/id6756895736",
-    chromeExtensionUrl: "https://chromewebstore.google.com/detail/promptschat/eemdohkhbaifiocagjlhibfbhamlbeej",
+    description: "HBB 的私有 AI 提示词库 — Collect, organize, and share AI prompts",
   },
 
   // Theme - design system configuration
@@ -68,25 +64,14 @@ export default defineConfig({
 
   // Homepage customization
   homepage: {
-    // Set to true to hide prompts.chat repo branding and use your own branding
+    // Set to true to hide upstream repo branding and use your own branding
     useCloneBranding,
     achievements: {
       enabled: !useCloneBranding,
     },
     sponsors: {
       enabled: !useCloneBranding,
-      items: [
-        // Add sponsors here
-        { name: "Neon", className: 'py-1', logo: '/sponsors/neon.svg', darkLogo: '/sponsors/neon-dark.svg', url: "https://get.neon.com/VqfnMo4" },
-        { name: "Clemta", logo: '/sponsors/clemta.webp', url: "https://clemta.com/?utm_source=prompts.chat" },
-        { name: "Wiro.ai", className: 'py-1', darkLogo: '/sponsors/wiro.png', logo: '/sponsors/wiro.png', url: "https://wiro.ai/?utm_source=prompts.chat" },
-        { name: "Cognition", logo: "/sponsors/cognition.svg", url: "https://wind.surf/prompts-chat" },
-        { name: "CodeRabbit", className: 'py-1', logo: '/sponsors/coderabbit.svg', darkLogo: '/sponsors/coderabbit-dark.svg', url: "https://coderabbit.link/fatih" },
-        { name: "Sentry", className: 'py-1', logo: '/sponsors/sentry.svg', darkLogo: '/sponsors/sentry-dark.svg', url: "https://sentry.io/?utm_source=prompts.chat" },
-
-        { name: "eachlabs", className: 'py-[6px]', logo: '/sponsors/eachlabs.png', darkLogo: '/sponsors/eachlabs-dark.png', url: "https://www.eachlabs.ai/?utm_source=promptschat&utm_medium=referral" },
-        { name: "CommandCode", className: 'py-1', logo: '/sponsors/commandcode.svg', darkLogo: '/sponsors/commandcode-dark.svg', url: "https://commandcode.ai/?utm_source=prompts.chat" },
-      ],
+      items: [],
     },
   },
 
@@ -94,11 +79,11 @@ export default defineConfig({
   // Example:
   // announcement: {
   //   id: "my-event-2026", // change the id to re-show the bar to users who dismissed it
-  //   message: "prompts.chat is sponsoring My Event",
-  //   messageShort: "prompts.chat × My Event",
+  //   message: "HBB Prompts is sponsoring My Event",
+  //   messageShort: "HBB Prompts x My Event",
   //   href: "https://example.com/",
   //   external: true,
-  //   cta: "Learn more →",
+  //   cta: "Learn more",
   // },
   announcement: null,
 });

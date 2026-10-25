@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💡 Submit a New Prompt
-    url: https://prompts.chat/prompts/new
+    url: https://github.com/skinheadH/HBB-prompts.chat/issues/new/choose
     about: Please submit new prompts via our website automation.
   - name: 🐛 Report a Bug / Spam
-    url: https://github.com/f/prompts.chat/issues/new?title=Report:%20
+    url: https://github.com/skinheadH/HBB-prompts.chat/issues/new/choose
     about: Report spam or issues with the repository.

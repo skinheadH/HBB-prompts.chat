@@ -19,6 +19,8 @@ import {
   mcpAiToolLimiter,
 } from "@/lib/rate-limit";
 
+const SITE_URL = (process.env.NEXTAUTH_URL || "http://localhost:3000").replace(/\/+$/, "");
+
 interface AuthenticatedUser {
   id: string;
   username: string;
@@ -487,7 +489,7 @@ function createServer(options: ServerOptions = {}) {
                           author: prompt.author.name || prompt.author.username,
                           category: prompt.category?.name || null,
                           tags: prompt.tags.map((t) => t.tag.name),
-                          link: `https://prompts.chat/prompts/${prompt.id}_${getPromptName(prompt)}`,
+                          link: `${SITE_URL}/prompts/${prompt.id}_${getPromptName(prompt)}`,
                         }),
                     },
                   ],
@@ -504,7 +506,7 @@ function createServer(options: ServerOptions = {}) {
                           author: prompt.author.name || prompt.author.username,
                           category: prompt.category?.name || null,
                           tags: prompt.tags.map((t) => t.tag.name),
-                          link: `https://prompts.chat/prompts/${prompt.id}_${getPromptName(prompt)}`,
+                          link: `${SITE_URL}/prompts/${prompt.id}_${getPromptName(prompt)}`,
                         }),
                     },
                   ],
@@ -526,7 +528,7 @@ function createServer(options: ServerOptions = {}) {
                       author: prompt.author.name || prompt.author.username,
                       category: prompt.category?.name || null,
                       tags: prompt.tags.map((t) => t.tag.name),
-                      link: `https://prompts.chat/prompts/${prompt.id}_${getPromptName(prompt)}`,
+                      link: `${SITE_URL}/prompts/${prompt.id}_${getPromptName(prompt)}`,
                     }),
                 },
               ],
@@ -560,7 +562,7 @@ function createServer(options: ServerOptions = {}) {
                   author: prompt.author.name || prompt.author.username,
                   category: prompt.category?.name || null,
                   tags: prompt.tags.map((t) => t.tag.name),
-                  link: `https://prompts.chat/prompts/${prompt.id}_${getPromptName(prompt)}`,
+                  link: `${SITE_URL}/prompts/${prompt.id}_${getPromptName(prompt)}`,
                 }),
             },
           ],
@@ -581,7 +583,7 @@ function createServer(options: ServerOptions = {}) {
     {
       title: "Save Prompt",
       description:
-        "Save a new prompt to your prompts.chat account. Requires API key authentication. Prompts are private by default unless configured otherwise in settings.",
+        "Save a new prompt to your HBB Prompts account. Requires API key authentication. Prompts are private by default unless configured otherwise in settings.",
       inputSchema: {
         title: z.string().min(1).max(200).describe("Title of the prompt"),
         content: z.string().min(1).describe("The prompt content. Can include variables like ${variable} or ${variable:default}"),
@@ -672,7 +674,7 @@ function createServer(options: ServerOptions = {}) {
                     ...prompt,
                     tags: prompt.tags.map((t) => t.tag.name),
                     category: prompt.category?.name || null,
-                    link: prompt.isPrivate ? null : `https://prompts.chat/prompts/${prompt.id}_${getPromptName(prompt)}`,
+                    link: prompt.isPrivate ? null : `${SITE_URL}/prompts/${prompt.id}_${getPromptName(prompt)}`,
                   },
                 }),
             },
@@ -744,7 +746,7 @@ function createServer(options: ServerOptions = {}) {
     {
       title: "Save Skill",
       description:
-        "Save a new Agent Skill to your prompts.chat account. Skills are multi-file prompts that can include SKILL.md (required), reference docs, scripts, and configuration files. Requires API key authentication. If the file contents are too long, first save the SKILL.md only, with no other files. Then call add_file_to_skill tool per file.",
+        "Save a new Agent Skill to your HBB Prompts account. Skills are multi-file prompts that can include SKILL.md (required), reference docs, scripts, and configuration files. Requires API key authentication. If the file contents are too long, first save the SKILL.md only, with no other files. Then call add_file_to_skill tool per file.",
       inputSchema: {
         title: z.string().min(1).max(200).describe("Title of the skill"),
         description: z.string().max(500).optional().describe("Description of what the skill does"),
@@ -851,7 +853,7 @@ function createServer(options: ServerOptions = {}) {
                     files: files.map(f => f.filename),
                     tags: skill.tags.map((t) => t.tag.name),
                     category: skill.category?.name || null,
-                    link: skill.isPrivate ? null : `https://prompts.chat/prompts/${skill.id}_${getPromptName(skill)}`,
+                    link: skill.isPrivate ? null : `${SITE_URL}/prompts/${skill.id}_${getPromptName(skill)}`,
                   },
                 }),
             },
@@ -953,7 +955,7 @@ function createServer(options: ServerOptions = {}) {
                   message: `File '${filename}' added to skill`,
                   skillId,
                   files: files.map(f => f.filename),
-                  link: `https://prompts.chat/prompts/${skill.id}_${getPromptName(skill)}`,
+                  link: `${SITE_URL}/prompts/${skill.id}_${getPromptName(skill)}`,
                 }),
             },
           ],
@@ -1047,7 +1049,7 @@ function createServer(options: ServerOptions = {}) {
                   message: `File '${filename}' updated in skill`,
                   skillId,
                   files: files.map(f => f.filename),
-                  link: `https://prompts.chat/prompts/${skill.id}_${getPromptName(skill)}`,
+                  link: `${SITE_URL}/prompts/${skill.id}_${getPromptName(skill)}`,
                 }),
             },
           ],
@@ -1139,7 +1141,7 @@ function createServer(options: ServerOptions = {}) {
                   message: `File '${filename}' removed from skill`,
                   skillId,
                   files: updatedFiles.map(f => f.filename),
-                  link: `https://prompts.chat/prompts/${skill.id}_${getPromptName(skill)}`,
+                  link: `${SITE_URL}/prompts/${skill.id}_${getPromptName(skill)}`,
                 }),
             },
           ],
@@ -1231,7 +1233,7 @@ function createServer(options: ServerOptions = {}) {
                     filename: f.filename,
                     content: f.content,
                   })),
-                  link: skill.isPrivate ? null : `https://prompts.chat/prompts/${skill.id}_${getPromptName(skill)}`,
+                  link: skill.isPrivate ? null : `${SITE_URL}/prompts/${skill.id}_${getPromptName(skill)}`,
                 }),
             },
           ],
@@ -1327,7 +1329,7 @@ function createServer(options: ServerOptions = {}) {
             fileNames: files.map(f => f.filename),
             fileCount: files.length,
             createdAt: s.createdAt.toISOString(),
-            link: `https://prompts.chat/prompts/${s.id}_${getPromptName(s)}`,
+            link: `${SITE_URL}/prompts/${s.id}_${getPromptName(s)}`,
           };
         });
 

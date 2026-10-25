@@ -967,7 +967,7 @@ export function PromptIde() {
               asChild
               className="gap-2"
             >
-              <a href="https://github.com/f/prompts.chat/blob/main/packages/prompts.chat/API.md" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/skinheadH/HBB-prompts.chat/blob/main/packages/prompts.chat/API.md" target="_blank" rel="noopener noreferrer">
                 <FileText className="h-4 w-4" />
                 Docs
               </a>

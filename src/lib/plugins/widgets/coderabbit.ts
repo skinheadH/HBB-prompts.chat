@@ -38,16 +38,8 @@ export const coderabbitWidget: WidgetPlugin = {
 
 Provide your review in a clear, actionable format with specific line references and code suggestions where applicable.`,
       type: "TEXT",
-      sponsor: {
-        name: "CodeRabbit",
-        logo: "/sponsors/coderabbit.svg",
-        logoDark: "/sponsors/coderabbit-dark.svg",
-        url: "https://coderabbit.link/fatih",
-      },
       tags: ["Code Review", "Development", "Security"],
       category: "Development",
-      actionUrl: "https://coderabbit.link/fatih",
-      actionLabel: "Try CodeRabbit",
       positioning: {
         position: 2,       // Start at position 2
         mode: "repeat",    // Repeat the widget

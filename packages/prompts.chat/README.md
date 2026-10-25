@@ -2,7 +2,7 @@
 
 A comprehensive developer toolkit for building, validating, and parsing AI prompts. Create structured prompts for chat models, image generators, video AI, and music generation with fluent, type-safe APIs.
 
-[![Playground](https://img.shields.io/badge/Playground-prompts.chat%2Ftyped--prompts--editor-blue)](https://prompts.chat/typed-prompts-editor)
+[![Playground](https://img.shields.io/badge/Playground-prompts.chat%2Ftyped--prompts--editor-blue)](https://github.com/skinheadH/HBB-prompts.chat)
 
 ## Reason
 
@@ -2392,4 +2392,4 @@ npm run test:coverage # With coverage
 
 ## License
 
-MIT © [Fatih Kadir Akın](https://github.com/f)
+MIT © [Fatih Kadir Akın](https://github.com/f), modifications © [HBB](https://github.com/skinheadH)

@@ -1,6 +1,6 @@
 # Docker Deployment Guide
 
-Run your own prompts.chat instance using Docker Compose.
+Run your own HBB Prompts instance using Docker Compose.
 
 [`compose.yml`](/compose.yml) supports both the pre-built container image being fetched from ghcr.io, or being built locally.
 
@@ -9,8 +9,8 @@ Run your own prompts.chat instance using Docker Compose.
 ### To build locally
 
 ```bash
-git clone https://github.com/f/prompts.chat.git
-cd prompts.chat
+git clone https://github.com/skinheadH/HBB-prompts.chat.git
+cd HBB-prompts.chat
 docker compose up -d --build
 ```
 
@@ -21,8 +21,8 @@ Open http://localhost:4444 in your browser.
 Simply remove the `--build` flag from the command:
 
 ```bash
-git clone https://github.com/f/prompts.chat.git
-cd prompts.chat
+git clone https://github.com/skinheadH/HBB-prompts.chat.git
+cd HBB-prompts.chat
 docker compose up -d
 ```
 
@@ -30,21 +30,10 @@ docker compose up -d
 
 If you already have a PostgreSQL instance, you can run just the app container:
 
-Need a hosted PostgreSQL database? We recommend [Neon](https://get.neon.com/VqfnMo4) for serverless Postgres with connection pooling and database branching.
-
-<div>
-  <p>Sponsored by</p>
-  <a href="https://get.neon.com/VqfnMo4">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/f/prompts.chat/main/public/sponsors/neon-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/f/prompts.chat/main/public/sponsors/neon.svg">
-      <img width="250px" alt="Neon Logo fallback" src="https://raw.githubusercontent.com/f/prompts.chat/main/public/sponsors/neon-dark.svg">
-    </picture>
-  </a>
-</div>
+Need a hosted PostgreSQL database? [Neon](https://neon.com) offers serverless Postgres with connection pooling and database branching.
 
 ```bash
-docker build -f docker/Dockerfile -t prompts.chat .
+docker build -f docker/Dockerfile -t hbb-prompts .
 docker run -d \
   --name prompts \
   -p 4444:3000 \
@@ -61,7 +50,7 @@ docker run -d \
   -p 4444:3000 \
   -e DATABASE_URL="postgresql://user:pass@your-db-host:5432/prompts?schema=public" \
   -e AUTH_SECRET="$(openssl rand -base64 32)" \
-  ghcr.io/f/prompts.chat:latest
+  ghcr.io/skinheadH/prompts.chat:latest
 ```
 
 ## Custom Branding

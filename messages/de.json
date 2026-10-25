@@ -1566,7 +1566,7 @@
     "releasedOn": "5. Dezember 2022",
     "storyTitle": "Unsere Geschichte",
     "goalTitle": "Unser Ziel",
-    "story1Rich": "prompts.chat ist die Web-Visualisierung des <repoLink>Awesome ChatGPT Prompts</repoLink> Repository. Es begann als persönliches Projekt von <authorLink>@f</authorLink>, um ChatGPT-Prompts zu organisieren, als ChatGPT in seiner ersten Version noch keine Verlaufsfunktion hatte.",
+    "story1Rich": "prompts.chat ist die Web-Visualisierung des <repoLink>Awesome ChatGPT Prompts</repoLink> Repository. Es begann als persönliches Projekt von <authorLink>@skinheadH</authorLink>, um ChatGPT-Prompts zu organisieren, als ChatGPT in seiner ersten Version noch keine Verlaufsfunktion hatte.",
     "story2": "Das Awesome ChatGPT Prompts Repository wurde am 5. Dezember 2022 erstellt, nur 2 Wochen nachdem ChatGPT der Welt vorgestellt wurde. Was als einfache Lösung begann, wurde zur wichtigsten Ressource für Millionen von KI-Enthusiasten.",
     "testimonialsRich": "Geliebt von KI-Pionieren, einschließlich der OpenAI-Mitgründer <gregLink>Greg Brockman</gregLink> und <wojciechLink>Wojciech Zaremba</wojciechLink>.",
     "openSource": "Von Anfang an komplett kostenlos und Open Source.",
@@ -1869,7 +1869,7 @@
     "metaTitle": "Prompt-Engineering-Leitfaden: Das Interaktive Buch des Promptings",
     "metaDescription": "Meistern Sie KI-Prompt-Engineering mit diesem kostenlosen, interaktiven Leitfaden. Lernen Sie ChatGPT-Prompts, Chain-of-Thought-Reasoning, Few-Shot-Learning und fortgeschrittene Techniken. 29+ Kapitel mit echten Beispielen.",
     "interactiveGuideBy": "Ein Interaktiver Leitfaden von",
-    "authorIntro": "Hallo, ich bin <author>Fatih Kadir Akın</author>, der Kurator des beliebten <repoLink>Awesome ChatGPT Prompts</repoLink>-Repositories auf GitHub und von <siteName>prompts.chat</siteName>.",
+    "authorIntro": "Hallo, ich bin <author>HBB</author>, der Kurator des beliebten <repoLink>Awesome ChatGPT Prompts</repoLink>-Repositories auf GitHub und von <siteName>prompts.chat</siteName>.",
     "bookDescription": "In diesem umfassenden und interaktiven Leitfaden entdecken Sie Expertenstrategien zur Erstellung überzeugender KI-Prompts, die ansprechende und effektive Gespräche fördern. Vom Verständnis der Funktionsweise von KI-Modellen bis zur Beherrschung fortgeschrittener Techniken wie Prompt-Chaining und agentische Systeme bietet Ihnen dieses Buch die Werkzeuge, die Sie benötigen, um Ihre KI-Interaktionen auf die nächste Stufe zu heben.",
     "whatYouWillLearn": "Was Sie lernen werden:",
     "highlights": {

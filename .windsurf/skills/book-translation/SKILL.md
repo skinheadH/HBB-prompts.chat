@@ -5,7 +5,7 @@ description: Translate "The Interactive Book of Prompting" chapters and UI strin
 
 # Book Translation Skill
 
-This skill guides translation of book content for **The Interactive Book of Prompting** at prompts.chat.
+This skill guides translation of book content for **The Interactive Book of Prompting** at HBB Prompts.
 
 ## Overview
 

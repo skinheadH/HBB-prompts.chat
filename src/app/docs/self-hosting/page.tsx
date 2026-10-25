@@ -64,7 +64,7 @@ export default async function SelfHostingPage() {
               </h3>
               <p className="text-muted-foreground">
                 <Link 
-                  href="https://deepwiki.com/f/prompts.chat" 
+                  href="https://deepwiki.com/skinheadH/HBB-prompts.chat" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="underline hover:text-foreground"
@@ -89,7 +89,7 @@ export default async function SelfHostingPage() {
               </h3>
               <p className="text-muted-foreground">
                 <Link 
-                  href="https://context7.com/f/prompts.chat?tab=chat" 
+                  href="https://context7.com/skinheadH/HBB-prompts.chat?tab=chat" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="underline hover:text-foreground"
@@ -135,7 +135,7 @@ export default async function SelfHostingPage() {
               <p className="text-muted-foreground">
                 prompts.chat requires PostgreSQL. For a hosted database, we recommend{" "}
                 <Link
-                  href="https://get.neon.com/VqfnMo4"
+                  href="https://neon.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-foreground"
@@ -147,7 +147,7 @@ export default async function SelfHostingPage() {
               <div>
                 <p className="text-xs uppercase tracking-wide text-muted-foreground mb-3">Sponsored by</p>
                 <Link
-                  href="https://get.neon.com/VqfnMo4"
+                  href="https://neon.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex"
@@ -176,7 +176,7 @@ export default async function SelfHostingPage() {
             <h3 className="text-lg font-semibold">Quick Start</h3>
           <div className="bg-muted rounded-lg p-4 font-mono text-sm space-y-1 overflow-x-auto">
             <p className="text-muted-foreground"># Clone the repository</p>
-            <p>git clone https://github.com/f/prompts.chat.git</p>
+            <p>git clone https://github.com/skinheadH/HBB-prompts.chat.git</p>
             <p>cd prompts.chat</p>
             <p className="text-muted-foreground mt-3"># Install dependencies</p>
             <p>npm install</p>
@@ -619,7 +619,7 @@ export default async function SelfHostingPage() {
           <p className="text-muted-foreground">
             For issues and questions, please open a{" "}
             <Link 
-              href="https://github.com/f/prompts.chat/issues" 
+              href="https://github.com/skinheadH/HBB-prompts.chat/issues" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="underline hover:text-foreground"
@@ -628,7 +628,7 @@ export default async function SelfHostingPage() {
             </Link>
             . For the complete documentation, see the{" "}
             <Link 
-              href="https://github.com/f/prompts.chat/blob/main/SELF-HOSTING.md" 
+              href="https://github.com/skinheadH/HBB-prompts.chat/blob/main/SELF-HOSTING.md" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="underline hover:text-foreground"

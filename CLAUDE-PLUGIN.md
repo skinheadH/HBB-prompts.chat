@@ -7,7 +7,7 @@ Access prompts.chat directly in [Claude Code](https://code.claude.com) with our 
 Add the prompts.chat marketplace to Claude Code:
 
 ```
-/plugin marketplace add f/prompts.chat
+/plugin marketplace add skinheadH/HBB-prompts.chat
 ```
 
 Then install the plugin:

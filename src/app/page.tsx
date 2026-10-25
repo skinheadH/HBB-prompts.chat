@@ -125,15 +125,6 @@ export default async function HomePage() {
                   {config.branding.chromeExtensionUrl && (
                     <ExtensionLink url={config.branding.chromeExtensionUrl} />
                   )}
-                  <Link
-                    href="raycast://extensions/fka/prompts-chat?source=prompts.chat"
-                    className="inline-flex items-center justify-center gap-2 h-10 px-2.5 2xl:px-4 bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 dark:hover:bg-zinc-700 rounded-lg transition-colors border border-zinc-700 dark:border-zinc-600"
-                  >
-                    <svg className="h-4 w-4 text-zinc-100" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M6.004 15.492v2.504L0 11.992l1.258-1.249Zm2.504 2.504H6.004L12.008 24l1.253-1.253zm14.24-4.747L24 11.997 12.003 0 10.75 1.251 15.491 6h-2.865L9.317 2.692 8.065 3.944l2.06 2.06H8.691v9.31H18v-1.432l2.06 2.06 1.252-1.252-3.312-3.32V8.506ZM6.63 5.372 5.38 6.625l1.342 1.343 1.251-1.253Zm10.655 10.655-1.247 1.251 1.342 1.343 1.253-1.251zM3.944 8.059 2.692 9.31l3.312 3.314v-2.506zm9.936 9.937h-2.504l3.314 3.312 1.25-1.252z"/>
-                    </svg>
-                    <span className="hidden 2xl:inline text-sm font-medium text-zinc-100 whitespace-nowrap">Raycast</span>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -255,15 +246,6 @@ export default async function HomePage() {
                   {config.branding.chromeExtensionUrl && (
                     <ExtensionLink url={config.branding.chromeExtensionUrl} />
                   )}
-                  <Link
-                    href="raycast://extensions/fka/prompts-chat?source=prompts.chat"
-                    className="inline-flex items-center justify-center gap-2 h-10 px-2.5 md:px-4 bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 dark:hover:bg-zinc-700 rounded-lg transition-colors border border-zinc-700 dark:border-zinc-600"
-                  >
-                    <svg className="h-4 w-4 text-zinc-100" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M6.004 15.492v2.504L0 11.992l1.258-1.249Zm2.504 2.504H6.004L12.008 24l1.253-1.253zm14.24-4.747L24 11.997 12.003 0 10.75 1.251 15.491 6h-2.865L9.317 2.692 8.065 3.944l2.06 2.06H8.691v9.31H18v-1.432l2.06 2.06 1.252-1.252-3.312-3.32V8.506ZM6.63 5.372 5.38 6.625l1.342 1.343 1.251-1.253Zm10.655 10.655-1.247 1.251 1.342 1.343 1.253-1.251zM3.944 8.059 2.692 9.31l3.312 3.314v-2.506zm9.936 9.937h-2.504l3.314 3.312 1.25-1.252z"/>
-                    </svg>
-                    <span className="hidden md:inline text-sm font-medium text-zinc-100 whitespace-nowrap">Raycast</span>
-                  </Link>
                 </div>
               </div>
             )}

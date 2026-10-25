@@ -50,7 +50,7 @@ jobs:
           api.upload_file(
               path_or_fileobj="prompts.csv",
               path_in_repo="prompts.csv",
-              repo_id="fka/prompts.chat",
+              repo_id="${{ github.repository }}",
               repo_type="dataset",
               commit_message="Update prompts.csv"
           )

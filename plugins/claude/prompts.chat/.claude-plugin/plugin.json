@@ -3,11 +3,11 @@
   "description": "Access thousands of AI prompts and skills directly in your AI coding assistant. Search prompts, discover skills, save your own, and improve prompts with AI.",
   "version": "1.0.0",
   "author": {
-    "name": "Fatih Kadir Akın",
-    "email": "fatihkadirakin@gmail.com"
+    "name": "HBB",
+    "email": "84764128+skinheadH@users.noreply.github.com"
   },
-  "homepage": "https://prompts.chat",
-  "repository": "https://github.com/f/prompts.chat",
+  "homepage": "https://github.com/skinheadH/HBB-prompts.chat",
+  "repository": "https://github.com/skinheadH/HBB-prompts.chat",
   "license": "MIT",
   "keywords": ["prompts", "ai", "skills", "chatgpt", "claude", "llm"],
   "commands": [

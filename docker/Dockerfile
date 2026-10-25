@@ -1,4 +1,4 @@
-# prompts.chat Docker Image
+# HBB Prompts Docker Image
 # Multi-stage build for a production-ready Next.js application
 #
 # Usage with Docker Compose:
@@ -46,8 +46,8 @@ RUN npm run build
 # ---- Stage 4: Runner ----
 FROM node:24-bookworm-slim AS runner
 
-LABEL org.opencontainers.image.source="https://github.com/f/prompts.chat"
-LABEL org.opencontainers.image.description="prompts.chat - Self-hosted AI prompt library"
+LABEL org.opencontainers.image.source="https://github.com/skinheadH/HBB-prompts.chat"
+LABEL org.opencontainers.image.description="HBB Prompts - Self-hosted AI prompt library"
 LABEL org.opencontainers.image.licenses="MIT"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \

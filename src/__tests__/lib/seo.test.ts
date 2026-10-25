@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 
 vi.mock("@/../prompts.config", () => ({
-  default: { branding: { name: "prompts.chat" } },
+  default: { branding: { name: "HBB Prompts" } },
 }));
 
 import {
@@ -26,23 +26,23 @@ describe("getBaseUrl", () => {
     expect(getBaseUrl()).toBe("https://example.com");
   });
 
-  it("should fall back to https://prompts.chat", () => {
+  it("should fall back to http://localhost:3000", () => {
     delete process.env.NEXTAUTH_URL;
-    expect(getBaseUrl()).toBe("https://prompts.chat");
+    expect(getBaseUrl()).toBe("http://localhost:3000");
   });
 });
 
 describe("absoluteUrl", () => {
   beforeEach(() => {
-    process.env.NEXTAUTH_URL = "https://prompts.chat";
+    process.env.NEXTAUTH_URL = "https://hbb.example";
   });
 
   it("should prefix paths with the site origin", () => {
-    expect(absoluteUrl("/categories/coding")).toBe("https://prompts.chat/categories/coding");
+    expect(absoluteUrl("/categories/coding")).toBe("https://hbb.example/categories/coding");
   });
 
   it("should add a missing leading slash", () => {
-    expect(absoluteUrl("tags/python")).toBe("https://prompts.chat/tags/python");
+    expect(absoluteUrl("tags/python")).toBe("https://hbb.example/tags/python");
   });
 
   it("should return absolute URLs unchanged", () => {
@@ -109,7 +109,7 @@ describe("escapeXml", () => {
 
 describe("toSitemapImageUrl", () => {
   beforeEach(() => {
-    process.env.NEXTAUTH_URL = "https://prompts.chat";
+    process.env.NEXTAUTH_URL = "https://hbb.example";
   });
 
   it("should escape ampersands in query strings", () => {
@@ -119,7 +119,7 @@ describe("toSitemapImageUrl", () => {
   });
 
   it("should make relative upload paths absolute", () => {
-    expect(toSitemapImageUrl("/uploads/image.png")).toBe("https://prompts.chat/uploads/image.png");
+    expect(toSitemapImageUrl("/uploads/image.png")).toBe("https://hbb.example/uploads/image.png");
   });
 
   it("should percent-encode spaces", () => {
@@ -143,23 +143,23 @@ describe("buildPageMetadata", () => {
     expect(metadata.alternates?.canonical).toBe("/categories/coding");
     expect(metadata.openGraph).toMatchObject({
       url: "/categories/coding",
-      title: "Coding Prompts | prompts.chat",
+      title: "Coding Prompts | HBB Prompts",
       description: "Browse coding prompts.",
     });
-    expect(metadata.twitter).toMatchObject({ title: "Coding Prompts | prompts.chat" });
+    expect(metadata.twitter).toMatchObject({ title: "Coding Prompts | HBB Prompts" });
     expect(metadata.robots).toBeUndefined();
   });
 
   it("should support absolute titles", () => {
     const metadata = buildPageMetadata({
-      title: "prompts.chat - Free AI Prompts",
+      title: "HBB Prompts - Free AI Prompts",
       description: "Home",
       path: "/",
       absoluteTitle: true,
     });
 
-    expect(metadata.title).toEqual({ absolute: "prompts.chat - Free AI Prompts" });
-    expect(metadata.openGraph).toMatchObject({ title: "prompts.chat - Free AI Prompts" });
+    expect(metadata.title).toEqual({ absolute: "HBB Prompts - Free AI Prompts" });
+    expect(metadata.openGraph).toMatchObject({ title: "HBB Prompts - Free AI Prompts" });
   });
 
   it("should emit noindex without a canonical", () => {

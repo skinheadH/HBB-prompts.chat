@@ -1566,7 +1566,7 @@
     "releasedOn": "5 de diciembre de 2022",
     "storyTitle": "Nuestra Historia",
     "goalTitle": "Nuestro Objetivo",
-    "story1Rich": "prompts.chat es la visualización web del repositorio <repoLink>Awesome ChatGPT Prompts</repoLink>. Comenzó como un proyecto personal de <authorLink>@f</authorLink> para mantener organizados los prompts de ChatGPT, cuando ChatGPT no tenía función de historial en su versión inicial.",
+    "story1Rich": "prompts.chat es la visualización web del repositorio <repoLink>Awesome ChatGPT Prompts</repoLink>. Comenzó como un proyecto personal de <authorLink>@skinheadH</authorLink> para mantener organizados los prompts de ChatGPT, cuando ChatGPT no tenía función de historial en su versión inicial.",
     "story2": "El repositorio Awesome ChatGPT Prompts fue creado el 5 de diciembre de 2022, solo 2 semanas después de que ChatGPT fuera anunciado al mundo. Lo que comenzó como una solución simple se convirtió en el recurso principal para millones de entusiastas de la IA.",
     "testimonialsRich": "Amado por pioneros de la IA, incluyendo a los cofundadores de OpenAI <gregLink>Greg Brockman</gregLink> y <wojciechLink>Wojciech Zaremba</wojciechLink>.",
     "openSource": "Completamente gratuito y de código abierto desde el primer día.",
@@ -1869,7 +1869,7 @@
     "metaTitle": "Guía de ingeniería de prompts: El Libro Interactivo del Prompting",
     "metaDescription": "Domina la ingeniería de prompts IA con esta guía interactiva gratuita. Aprende prompts de ChatGPT, razonamiento chain-of-thought, few-shot learning y técnicas avanzadas. 29+ capítulos con ejemplos reales.",
     "interactiveGuideBy": "Una Guía Interactiva de",
-    "authorIntro": "Hola, soy <author>Fatih Kadir Akın</author>, el curador del popular repositorio <repoLink>Awesome ChatGPT Prompts</repoLink> en GitHub y de <siteName>prompts.chat</siteName>.",
+    "authorIntro": "Hola, soy <author>HBB</author>, el curador del popular repositorio <repoLink>Awesome ChatGPT Prompts</repoLink> en GitHub y de <siteName>prompts.chat</siteName>.",
     "bookDescription": "En esta guía completa e interactiva, descubrirás estrategias expertas para crear prompts de IA convincentes que generan conversaciones atractivas y efectivas. Desde entender cómo funcionan los modelos de IA hasta dominar técnicas avanzadas como prompt chaining y sistemas agénticos, este libro te proporciona las herramientas que necesitas para llevar tus interacciones con IA al siguiente nivel.",
     "whatYouWillLearn": "Lo que aprenderás:",
     "highlights": {
