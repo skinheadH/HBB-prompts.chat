@@ -1,14 +1,14 @@
 # CLAUDE.md
 
-> Quick reference for Claude Code when working on HBB Prompts
+> Claude Code 开发 HBB Prompts 时的快速参考
 
-## Project Overview
+## 项目概述
 
-**HBB Prompts** is a social platform for AI prompts (forked from f/prompts.chat) built with Next.js 16 App Router, React 19, TypeScript, and PostgreSQL/Prisma. It allows users to share, discover, and collect prompts.
+**HBB Prompts** 是一个 AI 提示词社交平台（fork 自 f/prompts.chat），使用 Next.js 16 App Router、React 19、TypeScript 和 PostgreSQL/Prisma 构建。用户可以在上面分享、发现和收集提示词。
 
-For detailed agent guidelines, see [AGENTS.md](AGENTS.md).
+详细的代理指南见 [AGENTS.md](AGENTS.md)。
 
-## Quick Commands
+## 常用命令
 
 ```bash
 # Development
@@ -26,17 +26,17 @@ npm run db:seed          # Seed database
 npx tsc --noEmit         # Check TypeScript types
 ```
 
-## Key Files
+## 关键文件
 
-| File | Purpose |
-|------|---------|
-| `prompts.config.ts` | Main app configuration (branding, theme, auth, features) |
-| `prisma/schema.prisma` | Database schema |
-| `src/lib/auth/index.ts` | NextAuth configuration |
-| `src/lib/db.ts` | Prisma client singleton |
-| `messages/*.json` | i18n translation files |
+| 文件 | 用途 |
+|------|------|
+| `prompts.config.ts` | 主应用配置（品牌定制、主题、认证、功能） |
+| `prisma/schema.prisma` | 数据库 schema |
+| `src/lib/auth/index.ts` | NextAuth 配置 |
+| `src/lib/db.ts` | Prisma 客户端单例 |
+| `messages/*.json` | i18n 翻译文件 |
 
-## Project Structure
+## 项目结构
 
 ```
 src/
@@ -54,17 +54,17 @@ src/
     └── plugins/      # Auth and storage plugins
 ```
 
-## Code Patterns
+## 代码模式
 
-- **Server Components** by default, `"use client"` only when needed
-- **Translations:** Use `useTranslations()` or `getTranslations()` from next-intl
-- **Styling:** Tailwind CSS with `cn()` utility for conditional classes
-- **Forms:** React Hook Form + Zod validation
-- **Database:** Prisma client from `@/lib/db`
+- 默认使用 **Server Components**，仅在需要时使用 `"use client"`
+- **翻译：** 使用 next-intl 的 `useTranslations()` 或 `getTranslations()`
+- **样式：** Tailwind CSS，条件类名用 `cn()` 工具函数
+- **表单：** React Hook Form + Zod 校验
+- **数据库：** 使用 `@/lib/db` 的 Prisma client
 
-## Before Committing
+## 提交前
 
-1. Run `npm run lint` to check for issues
-2. Add translations for any user-facing text
-3. Use existing UI components from `src/components/ui/`
-4. Never commit secrets (use `.env`)
+1. 运行 `npm run lint` 检查问题
+2. 为所有面向用户的文本添加翻译
+3. 复用 `src/components/ui/` 中的现有 UI 组件
+4. 绝不提交密钥（使用 `.env`）

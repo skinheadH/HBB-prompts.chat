@@ -1,24 +1,24 @@
 # AGENTS.md
 
-> Guidelines for AI coding agents working on this project.
+> 在本项目上工作的 AI 编程代理指南。
 
-## Project Overview
+## 项目概述
 
-**HBB Prompts** is a social platform for AI prompts (forked from f/prompts.chat) built with Next.js 16. It allows users to share, discover, and collect prompts from the community. The project is open source and can be self-hosted with customizable branding, themes, and authentication.
+**HBB Prompts** 是一个 AI 提示词社交平台（fork 自 f/prompts.chat），基于 Next.js 16 构建。用户可以在社区中分享、发现和收集提示词。项目开源，支持自托管，并可定制品牌、主题和认证方式。
 
-### Tech Stack
+### 技术栈
 
-- **Framework:** Next.js 16.0.7 (App Router) with React 19.2
-- **Language:** TypeScript 5
-- **Database:** PostgreSQL with Prisma ORM 6.19
-- **Authentication:** NextAuth.js 5 (beta) with pluggable providers (credentials, GitHub, Google, Azure)
-- **Styling:** Tailwind CSS 4 with Radix UI primitives
-- **UI Components:** shadcn/ui pattern (components in `src/components/ui/`)
-- **Internationalization:** next-intl with 11 supported locales
-- **Icons:** Lucide React
-- **Forms:** React Hook Form with Zod validation
+- **框架：** Next.js 16.0.7（App Router）+ React 19.2
+- **语言：** TypeScript 5
+- **数据库：** PostgreSQL + Prisma ORM 6.19
+- **认证：** NextAuth.js 5（beta），支持可插拔的 providers（credentials、GitHub、Google、Azure）
+- **样式：** Tailwind CSS 4 + Radix UI primitives
+- **UI 组件：** shadcn/ui 模式（组件位于 `src/components/ui/`）
+- **国际化：** next-intl，支持 11 个 locale
+- **图标：** Lucide React
+- **表单：** React Hook Form + Zod 校验
 
-## Project Structure
+## 项目结构
 
 ```
 /
@@ -63,7 +63,7 @@
 └── package.json            # Dependencies and scripts
 ```
 
-## Commands
+## 命令
 
 ```bash
 # Development
@@ -86,27 +86,27 @@ npx tsc --noEmit         # Check TypeScript types without emitting
 node scripts/check-translations.js  # Check for missing translations across locales
 ```
 
-## Code Style Guidelines
+## 代码风格规范
 
 ### TypeScript
 
-- Use TypeScript strict mode
-- Prefer explicit types over `any`
-- Use `interface` for object shapes, `type` for unions/intersections
-- Functions: `camelCase` (e.g., `getUserData`, `handleSubmit`)
-- Components: `PascalCase` (e.g., `PromptCard`, `AuthContent`)
-- Constants: `UPPER_SNAKE_CASE` for true constants
-- Files: `kebab-case.tsx` for components, `camelCase.ts` for utilities
+- 使用 TypeScript 严格模式
+- 优先使用显式类型，不要用 `any`
+- 对象结构用 `interface`，联合/交叉类型用 `type`
+- 函数：`camelCase`（如 `getUserData`、`handleSubmit`）
+- 组件：`PascalCase`（如 `PromptCard`、`AuthContent`）
+- 常量：真正的常量用 `UPPER_SNAKE_CASE`
+- 文件：组件用 `kebab-case.tsx`，工具函数用 `camelCase.ts`
 
 ### React/Next.js
 
-- Use React Server Components by default
-- Add `"use client"` directive only when client interactivity is needed
-- Prefer server actions over API routes for mutations
-- Use `next-intl` for all user-facing strings (never hardcode text)
-- Import translations with `useTranslations()` or `getTranslations()`
+- 默认使用 React Server Components
+- 仅在需要客户端交互时才添加 `"use client"` 指令
+- 数据修改优先使用 server actions，而非 API routes
+- 所有面向用户的字符串都用 `next-intl`（绝不硬编码文本）
+- 用 `useTranslations()` 或 `getTranslations()` 引入翻译
 
-### Component Pattern
+### 组件模式
 
 ```tsx
 // Client component example
@@ -132,96 +132,96 @@ export function MyComponent({ title, onAction }: MyComponentProps) {
 }
 ```
 
-### Styling
+### 样式
 
-- Use Tailwind CSS utility classes
-- Follow mobile-first responsive design (`sm:`, `md:`, `lg:` breakpoints)
-- Use `cn()` utility from `@/lib/utils` for conditional classes
-- Prefer Radix UI primitives via shadcn/ui components
-- Keep component styling scoped and composable
+- 使用 Tailwind CSS 工具类
+- 遵循移动优先的响应式设计（`sm:`、`md:`、`lg:` 断点）
+- 条件类名使用 `@/lib/utils` 的 `cn()` 工具函数
+- 优先通过 shadcn/ui 组件使用 Radix UI primitives
+- 保持组件样式的局部性和可组合性
 
-### Database
+### 数据库
 
-- Use Prisma Client from `@/lib/db`
-- Always include proper `select` or `include` for relations
-- Use transactions for multi-step operations
-- Add indexes for frequently queried fields
+- 使用 `@/lib/db` 的 Prisma Client
+- 关联查询必须正确使用 `select` 或 `include`
+- 多步操作使用事务
+- 为频繁查询的字段添加索引
 
-## Configuration
+## 配置
 
-The main configuration file is `prompts.config.ts`:
+主配置文件是 `prompts.config.ts`：
 
-- **branding:** Logo, name, and description
-- **theme:** Colors, border radius, UI variant
-- **auth:** Authentication providers array (credentials, github, google, azure)
-- **i18n:** Supported locales and default locale
-- **features:** Feature flags (privatePrompts, changeRequests, categories, tags, aiSearch)
-- **homepage:** Homepage customization and sponsors
+- **品牌定制：** Logo、名称和描述
+- **主题：** 颜色、圆角、UI 变体
+- **认证：** providers 数组（credentials、github、google、azure）
+- **i18n：** 支持的 locale 和默认 locale
+- **功能：** 功能开关（privatePrompts、changeRequests、categories、tags、aiSearch）
+- **首页：** 页面定制项和赞助商
 
-## Plugin System
+## 插件系统
 
-Authentication and storage use a plugin architecture:
+认证和存储采用插件式架构：
 
-### Auth Plugins (`src/lib/plugins/auth/`)
-- `credentials.ts` - Email/password authentication
+### 认证插件（`src/lib/plugins/auth/`）
+- `credentials.ts` - 邮箱/密码认证
 - `github.ts` - GitHub OAuth
 - `google.ts` - Google OAuth  
 - `azure.ts` - Microsoft Entra ID
 
-### Storage Plugins (`src/lib/plugins/storage/`)
-- `url.ts` - URL-based media (default)
-- `s3.ts` - AWS S3 storage
+### 存储插件（`src/lib/plugins/storage/`）
+- `url.ts` - 基于 URL 的媒体（默认）
+- `s3.ts` - AWS S3 存储
 
-## Internationalization
+## 国际化
 
-- Translation files are in `messages/{locale}.json`
-- Currently supported: en, tr, es, zh, ja, ar, pt, fr, de, ko, it
-- Add new locales to `prompts.config.ts` i18n.locales array
-- Create corresponding translation file in `messages/`
-- Add language to selector in `src/components/layout/header.tsx`
+- 翻译文件位于 `messages/{locale}.json`
+- 当前支持：en、tr、es、zh、ja、ar、pt、fr、de、ko、it
+- 在 `prompts.config.ts` 的 i18n.locales 数组中新增 locale
+- 在 `messages/` 中创建对应的翻译文件
+- 在 `src/components/layout/header.tsx` 的选择器中添加该语言
 
-## Key Files
+## 关键文件
 
-| File | Purpose |
-|------|---------|
-| `prompts.config.ts` | Main app configuration |
-| `prisma/schema.prisma` | Database schema |
-| `src/lib/auth/index.ts` | NextAuth configuration |
-| `src/lib/db.ts` | Prisma client singleton |
-| `src/app/layout.tsx` | Root layout with providers |
-| `src/components/ui/` | Base UI components (shadcn) |
+| 文件 | 用途 |
+|------|------|
+| `prompts.config.ts` | 主应用配置 |
+| `prisma/schema.prisma` | 数据库 schema |
+| `src/lib/auth/index.ts` | NextAuth 配置 |
+| `src/lib/db.ts` | Prisma 客户端单例 |
+| `src/app/layout.tsx` | 根布局（含 providers） |
+| `src/components/ui/` | 基础 UI 组件（shadcn） |
 
-## Boundaries
+## 边界
 
-### Always Do
-- Run `npm run lint` before committing
-- Use existing UI components from `src/components/ui/`
-- Add translations for all user-facing text
-- Follow existing code patterns and file structure
-- Use TypeScript strict types
+### 必须做
+- 提交前运行 `npm run lint`
+- 复用 `src/components/ui/` 中的现有 UI 组件
+- 为所有面向用户的文本添加翻译
+- 遵循现有的代码模式和文件结构
+- 使用 TypeScript 严格类型
 
-### Ask First
-- Database schema changes (require migrations)
-- Adding new dependencies
-- Modifying authentication flow
-- Changes to `prompts.config.ts` structure
+### 先问后做
+- 数据库 schema 变更（需要迁移）
+- 新增依赖
+- 修改认证流程
+- 改动 `prompts.config.ts` 的结构
 
-### Never Do
-- Commit secrets or API keys (use `.env`)
-- Modify `node_modules/` or generated files
-- Delete existing translations
-- Remove or weaken TypeScript types
-- Hardcode user-facing strings (use i18n)
+### 绝不做
+- 提交密钥或 API key（用 `.env`）
+- 修改 `node_modules/` 或生成的文件
+- 删除现有翻译
+- 移除或弱化 TypeScript 类型
+- 硬编码面向用户的字符串（要用 i18n）
 
-## Environment Variables
+## 环境变量
 
-Required in `.env`:
+`.env` 中必填：
 ```
 DATABASE_URL=           # PostgreSQL connection string
 AUTH_SECRET=            # NextAuth secret key
 ```
 
-Optional OAuth (if using those providers):
+可选的 OAuth 配置（如果使用相应 providers）：
 ```
 AUTH_GITHUB_ID=
 AUTH_GITHUB_SECRET=
@@ -232,37 +232,37 @@ AUTH_AZURE_AD_CLIENT_SECRET=
 AUTH_AZURE_AD_ISSUER=
 ```
 
-Optional features:
+可选功能：
 ```
 OPENAI_API_KEY=         # For AI-powered semantic search
 ```
 
-## Testing
+## 测试
 
-Currently no automated tests. When implementing:
-- Place tests adjacent to source files or in `__tests__/` directories
-- Use descriptive test names
-- Mock external services (database, OAuth)
+目前没有自动化测试。写测试时：
+- 把测试放在源文件旁边或 `__tests__/` 目录中
+- 使用描述性的测试名称
+- 对外部服务（数据库、OAuth）进行 mock
 
-## Common Tasks
+## 常见任务
 
-### Adding a new page
-1. Create route in `src/app/{route}/page.tsx`
-2. Use server component for data fetching
-3. Add translations to `messages/*.json`
+### 新增页面
+1. 在 `src/app/{route}/page.tsx` 创建路由
+2. 用 server component 获取数据
+3. 在 `messages/*.json` 中添加翻译
 
-### Adding a new component
-1. Create in appropriate `src/components/{category}/` folder
-2. Export from component file (no barrel exports needed)
-3. Follow existing component patterns
+### 新增组件
+1. 在合适的 `src/components/{category}/` 目录下创建
+2. 从组件文件导出（不需要 barrel export）
+3. 遵循现有组件模式
 
-### Adding a new API route
-1. Create in `src/app/api/{route}/route.ts`
-2. Export appropriate HTTP method handlers (GET, POST, etc.)
-3. Use Zod for request validation
-4. Return proper JSON responses with status codes
+### 新增 API 路由
+1. 在 `src/app/api/{route}/route.ts` 创建
+2. 导出相应的 HTTP 方法处理器（GET、POST 等）
+3. 用 Zod 校验请求
+4. 返回带正确状态码的 JSON 响应
 
-### Modifying database schema
-1. Update `prisma/schema.prisma`
-2. Run `npm run db:migrate` to create migration
-3. Update related TypeScript types if needed
+### 修改数据库 schema
+1. 更新 `prisma/schema.prisma`
+2. 运行 `npm run db:migrate` 创建迁移
+3. 如有需要，更新相关的 TypeScript 类型

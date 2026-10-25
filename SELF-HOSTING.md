@@ -1,47 +1,47 @@
-# Self-Hosting Guide
+# 自托管指南
 
-## Capabilities
+## 功能
 
-- **Curated Prompt Library** — Access 100+ high-quality, community-tested prompts for ChatGPT, Claude, Gemini, Llama, Mistral, and other AI models
-- **Discover & Browse** — Explore prompts by categories, tags, or AI-powered semantic search
-- **Create & Share Prompts** — Submit your own prompts with support for text, structured (JSON/YAML), and media-enhanced formats
-- **Version Control** — Track prompt changes with built-in versioning and change request system (similar to PRs)
-- **Personalized Feed** — Subscribe to categories and get a curated feed of prompts matching your interests
-- **Private Prompts** — Keep your prompts private or share them with the community
-- **Voting & Leaderboard** — Upvote prompts and discover the most popular ones via PromptMasters leaderboard
-- **Multi-language Support** — Available in English, Spanish, Japanese, Turkish, and Chinese
+- **精选提示词库** —— 收录 100+ 条经社区验证的高质量提示词，适用于 ChatGPT、Claude、Gemini、Llama、Mistral 等 AI 模型
+- **发现与浏览** —— 按分类、标签浏览提示词，或使用 AI 语义搜索
+- **创建与分享提示词** —— 提交你自己的提示词，支持纯文本、结构化（JSON/YAML）和富媒体格式
+- **版本管理** —— 内置版本记录和变更请求系统（类似 PR），随时跟踪提示词的修改
+- **个性化信息流** —— 订阅感兴趣的分类，获取对应的精选提示词
+- **私有提示词** —— 将提示词设为私有，或分享给社区
+- **投票与排行榜** —— 给提示词投票，通过 PromptMasters 排行榜发现最受欢迎的内容
+- **多语言支持** —— 支持英语、西班牙语、日语、土耳其语和中文
 
-## Benefits
+## 优势
 
-- **Unlock AI Potential:** Stop struggling with prompt engineering — use battle-tested prompts from 141k+ GitHub stars community
-- **Save Time:** Copy prompts with one click, customize variables inline, and use them instantly in any AI chat
-- **Community-Driven Quality:** Every prompt is curated and refined by the community through change requests and voting
-- **Self-Hostable:** Deploy your own white-labeled prompt library for your team or organization with customizable branding, themes, and authentication
-- **CC0 Licensed:** All prompts are public domain — use them freely for any purpose, commercial or personal
+- **释放 AI 潜力：** 不用再为提示词工程头疼 —— 直接使用来自 141k+ GitHub star 社区的久经考验的提示词
+- **节省时间：** 一键复制提示词，就地修改变量，立刻在任何 AI 聊天中使用
+- **社区驱动质量：** 每条提示词都经社区通过变更请求和投票筛选、打磨
+- **可自托管：** 为你的团队或组织部署白标提示词库，品牌定制、主题和身份验证均可自定义
+- **CC0 许可：** 所有提示词均为公共领域 —— 任何用途（商业或个人）均可自由使用
 
-## Getting Started
+## 开始使用
 
-**Requirements:**
-- **Plan:** Free and open-source (CC0 license)
-- **User Permissions:** No account needed to browse; sign in via GitHub/Google to create & save prompts
+**要求：**
+- **方案：** 免费且开源（CC0 许可）
+- **用户权限：** 浏览无需账号；通过 GitHub/Google 登录后可创建和保存提示词
 
 ---
 
-This guide explains how to deploy **HBB Prompts** on your own private server for enhanced privacy and customization.
+本指南介绍如何在你的私有服务器上部署 **HBB Prompts**，以获得更强的隐私保护和定制能力。
 
-## Prerequisites
+## 前置条件
 
 - **Node.js** 24.x
-- **PostgreSQL** database
+- **PostgreSQL** 数据库
 - **npm**
 
-## Recommended Database
+## 推荐数据库
 
-HBB Prompts requires PostgreSQL. For a hosted PostgreSQL database, [Neon](https://neon.com) provides serverless Postgres, connection pooling, and branching that work well for self-hosted deployments.
+HBB Prompts 需要 PostgreSQL。如果需要托管数据库，[Neon](https://neon.com) 提供 serverless Postgres、连接池和分支功能，很适合自托管部署。
 
-## Environment Variables
+## 环境变量
 
-Create a `.env` file based on `.env.example`:
+基于 `.env.example` 创建 `.env` 文件：
 
 ```bash
 # Database
@@ -63,76 +63,76 @@ AUTH_SECRET="generate-a-random-secret"
 OPENAI_API_KEY="your-openai-api-key"
 ```
 
-## Installation
+## 安装
 
-### Quick Start (Recommended)
+### 快速开始（推荐）
 
-The fastest way to create a new HBB Prompts instance:
+创建 HBB Prompts 新实例最快的方式：
 
 ```bash
 npx prompts.chat new my-prompt-library
 cd my-prompt-library
 ```
 
-This will:
-1. Clone a clean copy of the repository (without development files)
-2. Install dependencies
-3. Launch the interactive setup wizard
+该命令会：
+1. 克隆一份干净的仓库副本（不含开发文件）
+2. 安装依赖
+3. 启动交互式安装向导
 
-### Manual Installation
+### 手动安装
 
-1. **Clone the repository**
+1. **克隆仓库**
    ```bash
    git clone https://github.com/skinheadH/HBB-prompts.chat.git
    cd HBB-prompts.chat
    ```
 
-2. **Install dependencies**
+2. **安装依赖**
    ```bash
    npm install
    ```
 
-3. **Run the interactive setup wizard**
+3. **运行交互式安装向导**
    ```bash
    npm run setup
    ```
-   This will guide you through configuring:
-   - **Branding** — App name, logo, description
-   - **Theme** — Primary color, border radius, UI variant
-   - **Authentication** — GitHub, Google, Apple, Azure AD, or email/password
-   - **Languages** — Select from 16 supported locales
-   - **Features** — Private prompts, categories, tags, comments, AI search, AI generation, MCP support
+   向导会引导你完成以下配置：
+   - **品牌定制** —— 应用名称、Logo、描述
+   - **主题** —— 主色、圆角、UI 变体
+   - **身份验证** —— GitHub、Google、Apple、Azure AD 或邮箱/密码
+   - **语言** —— 从 16 个支持的语言中选择
+   - **功能** —— 私有提示词、分类、标签、评论、AI 搜索、AI 生成、MCP 支持
 
-4. **Configure environment variables**
+4. **配置环境变量**
    ```bash
    cp .env.example .env
    # Edit .env with your database and auth credentials
    ```
 
-5. **Run database migrations**
+5. **运行数据库迁移**
    ```bash
    npm run db:migrate
    ```
 
-6. **Seed initial data** (optional)
+6. **导入种子数据**（可选）
    ```bash
    npm run db:seed
    ```
 
-7. **Start the development server**
+7. **启动开发服务器**
    ```bash
    npm run dev
    ```
 
-8. **Build for production**
+8. **构建生产版本**
    ```bash
    npm run build
    npm run start
    ```
 
-## Configuration
+## 配置
 
-The setup wizard (`npm run setup`) generates `prompts.config.ts` automatically. You can also manually edit it:
+安装向导（`npm run setup`）会自动生成 `prompts.config.ts`，你也可以手动编辑：
 
 ```typescript
 // Set to true to use your own branding instead of upstream branding
@@ -190,19 +190,19 @@ export default defineConfig({
 });
 ```
 
-### Clone Branding Mode
+### 自有品牌模式
 
-When `useCloneBranding` is set to `true`, the homepage will:
+当 `useCloneBranding` 设为 `true` 时，首页会：
 
-- Display your **branding name** as the hero title
-- Show your **branding description** below the title
-- Use your **logo** as a watermark background instead of the video
-- Hide the "Deploy Your Private Server" button
-- Hide the achievements section (Forbes, GitHub stars, etc.)
-- Hide the sponsor links and "Become a Sponsor" CTA
+- 把你的**品牌名称**作为头图大标题
+- 在标题下方显示你的**品牌描述**
+- 用你的**Logo** 作为水印背景，替换原来的视频
+- 隐藏“部署你的私有服务器”按钮
+- 隐藏成就板块（Forbes、GitHub star 等）
+- 隐藏赞助商链接和“成为赞助商”按钮
 
-This is ideal for organizations that want to deploy their own white-labeled prompt library without upstream branding.
+适合想部署自有白标提示词库、不带上游品牌信息的组织。
 
-## Support
+## 支持
 
-For issues and questions, please open a [GitHub Issue](https://github.com/skinheadH/HBB-prompts.chat/issues).
+如有问题或疑问，请提交 [GitHub Issue](https://github.com/skinheadH/HBB-prompts.chat/issues)。

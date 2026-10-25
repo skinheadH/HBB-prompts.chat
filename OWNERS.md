@@ -1,23 +1,23 @@
-# Owners
+# 维护者名单
 
-This file lists the current maintainers and emeritus maintainers of HBB Prompts (forked from f/prompts.chat).
+本文件列出 HBB Prompts（fork 自 f/prompts.chat）的现任维护者和荣誉维护者。
 
-## Project Lead
+## 项目负责人
 
-| Name | GitHub | Affiliation |
-|------|--------|-------------|
-| HBB | [@skinheadH](https://github.com/skinheadH) | Independent |
+| 姓名 | GitHub | 所属 |
+|------|--------|------|
+| HBB | [@skinheadH](https://github.com/skinheadH) | 独立 |
 
-## Maintainers
+## 维护者
 
-| Name | GitHub | Affiliation | Since |
-|------|--------|-------------|-------|
-| HBB | [@skinheadH](https://github.com/skinheadH) | Independent | Oct 2026 |
+| 姓名 | GitHub | 所属 | 加入时间 |
+|------|--------|------|----------|
+| HBB | [@skinheadH](https://github.com/skinheadH) | 独立 | 2026 年 10 月 |
 
-## Emeritus Maintainers
+## 荣誉维护者
 
-None yet.
+暂无。
 
 ---
 
-We are actively looking to grow the maintainer team. If you are interested in becoming a maintainer, please see [GOVERNANCE.md](GOVERNANCE.md) for how the process works. Sustained contributions and involvement in code review are the best way to get started.
+我们正在积极扩充维护者团队。如果你有兴趣成为维护者，请参阅 [GOVERNANCE.md](GOVERNANCE.md) 了解流程。持续的贡献和参与代码审查是最好的起点。

@@ -1,12 +1,12 @@
-# Docker Deployment Guide
+# Docker 部署指南
 
-Run your own HBB Prompts instance using Docker Compose.
+使用 Docker Compose 运行你自己的 HBB Prompts 实例。
 
-[`compose.yml`](/compose.yml) supports both the pre-built container image being fetched from ghcr.io, or being built locally.
+[`compose.yml`](/compose.yml) 支持两种方式：从 ghcr.io 拉取预构建容器镜像，或在本地构建。
 
-## Quick Start
+## 快速开始
 
-### To build locally
+### 本地构建
 
 ```bash
 git clone https://github.com/skinheadH/HBB-prompts.chat.git
@@ -14,11 +14,11 @@ cd HBB-prompts.chat
 docker compose up -d --build
 ```
 
-Open http://localhost:4444 in your browser.
+在浏览器中打开 http://localhost:4444。
 
-### Using a Pre-built Image
+### 使用预构建镜像
 
-Simply remove the `--build` flag from the command:
+只需从命令中去掉 `--build` 参数：
 
 ```bash
 git clone https://github.com/skinheadH/HBB-prompts.chat.git
@@ -26,11 +26,11 @@ cd HBB-prompts.chat
 docker compose up -d
 ```
 
-## Standalone (Bring Your Own Database)
+## 独立部署（自备数据库）
 
-If you already have a PostgreSQL instance, you can run just the app container:
+如果你已有 PostgreSQL 实例，可以只运行应用容器：
 
-Need a hosted PostgreSQL database? [Neon](https://neon.com) offers serverless Postgres with connection pooling and database branching.
+需要托管式 PostgreSQL 数据库？[Neon](https://neon.com) 提供带连接池和数据库分支功能的 serverless Postgres。
 
 ```bash
 docker build -f docker/Dockerfile -t hbb-prompts .
@@ -42,7 +42,7 @@ docker run -d \
   prompts.chat
 ```
 
-Or if you simply want to use the pre-built image:
+或者直接用预构建镜像：
 
 ```bash
 docker run -d \
@@ -53,9 +53,9 @@ docker run -d \
   ghcr.io/skinheadH/prompts.chat:latest
 ```
 
-## Custom Branding
+## 自定义品牌
 
-All branding is configured via `PCHAT_*` environment variables at runtime -- no rebuild needed.
+所有品牌定制都通过 `PCHAT_*` 环境变量在运行时配置——无需重新构建。
 
 ```yaml
 # compose.yml
@@ -70,70 +70,70 @@ services:
       PCHAT_LOCALES: "en,es,fr"
 ```
 
-Then restart: `docker compose up -d`
+然后重启：`docker compose up -d`
 
-## Configuration Variables
+## 配置变量
 
-All variables are prefixed with `PCHAT_` to avoid conflicts.
+所有变量都带 `PCHAT_` 前缀，以避免冲突。
 
-#### Branding (`branding.*` in prompts.config.ts)
-
-| Env Variable | Config Path | Description | Default |
-|--------------|-------------|-------------|---------|
-| `PCHAT_NAME` | `branding.name` | App name shown in UI | `My Prompt Library` |
-| `PCHAT_DESCRIPTION` | `branding.description` | App description | `Collect, organize...` |
-| `PCHAT_LOGO` | `branding.logo` | Logo path (in public/) | `/logo.svg` |
-| `PCHAT_LOGO_DARK` | `branding.logoDark` | Dark mode logo | Same as `PCHAT_LOGO` |
-| `PCHAT_FAVICON` | `branding.favicon` | Favicon path | `/logo.svg` |
-
-#### Theme (`theme.*` in prompts.config.ts)
+#### 品牌定制（`branding.*` in prompts.config.ts）
 
 | Env Variable | Config Path | Description | Default |
 |--------------|-------------|-------------|---------|
-| `PCHAT_COLOR` | `theme.colors.primary` | Primary color (hex) | `#6366f1` |
-| `PCHAT_THEME_RADIUS` | `theme.radius` | Border radius: `none\|sm\|md\|lg` | `sm` |
-| `PCHAT_THEME_VARIANT` | `theme.variant` | UI style: `default\|flat\|brutal` | `default` |
-| `PCHAT_THEME_DENSITY` | `theme.density` | Spacing: `compact\|default\|comfortable` | `default` |
+| `PCHAT_NAME` | `branding.name` | 界面显示的应用名称 | `My Prompt Library` |
+| `PCHAT_DESCRIPTION` | `branding.description` | 应用描述 | `Collect, organize...` |
+| `PCHAT_LOGO` | `branding.logo` | Logo 路径（位于 public/） | `/logo.svg` |
+| `PCHAT_LOGO_DARK` | `branding.logoDark` | 暗色模式 Logo | 同 `PCHAT_LOGO` |
+| `PCHAT_FAVICON` | `branding.favicon` | Favicon 路径 | `/logo.svg` |
 
-#### Authentication (`auth.*` in prompts.config.ts)
-
-| Env Variable | Config Path | Description | Default |
-|--------------|-------------|-------------|---------|
-| `PCHAT_AUTH_PROVIDERS` | `auth.providers` | Providers: `github,google,credentials` | `credentials` |
-| `PCHAT_ALLOW_REGISTRATION` | `auth.allowRegistration` | Allow public signup | `true` |
-
-#### Internationalization (`i18n.*` in prompts.config.ts)
+#### 主题（`theme.*` in prompts.config.ts）
 
 | Env Variable | Config Path | Description | Default |
 |--------------|-------------|-------------|---------|
-| `PCHAT_LOCALES` | `i18n.locales` | Supported locales (comma-separated) | `en` |
-| `PCHAT_DEFAULT_LOCALE` | `i18n.defaultLocale` | Default locale | `en` |
+| `PCHAT_COLOR` | `theme.colors.primary` | 主色调（十六进制） | `#6366f1` |
+| `PCHAT_THEME_RADIUS` | `theme.radius` | 圆角：`none\|sm\|md\|lg` | `sm` |
+| `PCHAT_THEME_VARIANT` | `theme.variant` | 界面风格：`default\|flat\|brutal` | `default` |
+| `PCHAT_THEME_DENSITY` | `theme.density` | 间距：`compact\|default\|comfortable` | `default` |
 
-#### Features (`features.*` in prompts.config.ts)
+#### 认证（`auth.*` in prompts.config.ts）
 
 | Env Variable | Config Path | Description | Default |
 |--------------|-------------|-------------|---------|
-| `PCHAT_FEATURE_PRIVATE_PROMPTS` | `features.privatePrompts` | Enable private prompts | `true` |
-| `PCHAT_FEATURE_CHANGE_REQUESTS` | `features.changeRequests` | Enable versioning | `true` |
-| `PCHAT_FEATURE_CATEGORIES` | `features.categories` | Enable categories | `true` |
-| `PCHAT_FEATURE_TAGS` | `features.tags` | Enable tags | `true` |
-| `PCHAT_FEATURE_COMMENTS` | `features.comments` | Enable comments | `true` |
-| `PCHAT_FEATURE_AI_SEARCH` | `features.aiSearch` | Enable AI search | `false` |
-| `PCHAT_FEATURE_AI_GENERATION` | `features.aiGeneration` | Enable AI generation | `false` |
-| `PCHAT_FEATURE_MCP` | `features.mcp` | Enable MCP features | `false` |
+| `PCHAT_AUTH_PROVIDERS` | `auth.providers` | 认证提供商：`github,google,credentials` | `credentials` |
+| `PCHAT_ALLOW_REGISTRATION` | `auth.allowRegistration` | 允许公开注册 | `true` |
 
-## System Environment Variables
+#### 国际化（`i18n.*` in prompts.config.ts）
+
+| Env Variable | Config Path | Description | Default |
+|--------------|-------------|-------------|---------|
+| `PCHAT_LOCALES` | `i18n.locales` | 支持的语言（逗号分隔） | `en` |
+| `PCHAT_DEFAULT_LOCALE` | `i18n.defaultLocale` | 默认语言 | `en` |
+
+#### 功能开关（`features.*` in prompts.config.ts）
+
+| Env Variable | Config Path | Description | Default |
+|--------------|-------------|-------------|---------|
+| `PCHAT_FEATURE_PRIVATE_PROMPTS` | `features.privatePrompts` | 启用私有提示词 | `true` |
+| `PCHAT_FEATURE_CHANGE_REQUESTS` | `features.changeRequests` | 启用版本管理 | `true` |
+| `PCHAT_FEATURE_CATEGORIES` | `features.categories` | 启用分类 | `true` |
+| `PCHAT_FEATURE_TAGS` | `features.tags` | 启用标签 | `true` |
+| `PCHAT_FEATURE_COMMENTS` | `features.comments` | 启用评论 | `true` |
+| `PCHAT_FEATURE_AI_SEARCH` | `features.aiSearch` | 启用 AI 搜索 | `false` |
+| `PCHAT_FEATURE_AI_GENERATION` | `features.aiGeneration` | 启用 AI 生成 | `false` |
+| `PCHAT_FEATURE_MCP` | `features.mcp` | 启用 MCP 功能 | `false` |
+
+## 系统环境变量
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `AUTH_SECRET` | Secret for authentication tokens | Auto-generated (set explicitly for production) |
-| `DATABASE_URL` | PostgreSQL connection string | Set in compose.yml |
-| `DIRECT_URL` | Direct PostgreSQL URL (bypasses poolers) | Same as DATABASE_URL |
-| `PORT` | Host port mapping | `4444` |
+| `AUTH_SECRET` | 认证令牌密钥 | 自动生成（生产环境建议显式设置） |
+| `DATABASE_URL` | PostgreSQL 连接字符串 | 在 compose.yml 中设置 |
+| `DIRECT_URL` | 直连 PostgreSQL URL（绕过连接池） | 同 `DATABASE_URL` |
+| `PORT` | 宿主机端口映射 | `4444` |
 
-## Production Setup
+## 生产环境配置
 
-For production, always set `AUTH_SECRET` explicitly:
+生产环境下务必显式设置 `AUTH_SECRET`：
 
 ```bash
 # Generate a secret
@@ -143,13 +143,13 @@ export AUTH_SECRET=$(openssl rand -base64 32)
 docker compose up -d
 ```
 
-Or add it to a `.env` file next to `compose.yml`:
+或者把它写进 `compose.yml` 旁边的 `.env` 文件：
 
 ```env
 AUTH_SECRET=your-secret-key-here
 ```
 
-### With OAuth Providers
+### 使用 OAuth 提供商
 
 ```yaml
 # compose.yml
@@ -164,7 +164,7 @@ services:
       AUTH_GOOGLE_SECRET: "your-google-client-secret"
 ```
 
-### With AI Features (OpenAI)
+### 使用 AI 功能（OpenAI）
 
 ```yaml
 # compose.yml
@@ -176,17 +176,17 @@ services:
       OPENAI_API_KEY: "sk-..."
 ```
 
-## Database Seeding
+## 数据库种子数据
 
-Seed the database with example prompts:
+用示例提示词给数据库播种：
 
 ```bash
 docker compose exec app npx prisma db seed
 ```
 
-## Custom Logo
+## 自定义 Logo
 
-Mount your logo file into the app container:
+把你的 logo 文件挂载到应用容器中：
 
 ```yaml
 # compose.yml
@@ -198,11 +198,11 @@ services:
       PCHAT_LOGO: "/logo.svg"
 ```
 
-## Data Persistence
+## 数据持久化
 
-PostgreSQL data is stored in the `postgres_data` named volume and persists across container restarts, rebuilds, and image updates.
+PostgreSQL 数据存储在名为 `postgres_data` 的卷中，容器重启、重新构建、镜像更新后都不会丢失。
 
-### Backup
+### 备份
 
 ```bash
 # Backup database
@@ -212,22 +212,23 @@ docker compose exec db pg_dump -U prompts prompts > backup.sql
 docker compose exec -T db psql -U prompts prompts < backup.sql
 ```
 
-## Building Locally
+## 本地构建
 
 ```bash
 docker compose build
 docker compose up -d
 ```
 
-## Health Check
+## 健康检查
 
-The app container includes a health check endpoint:
+应用容器提供健康检查端点：
 
 ```bash
 curl http://localhost:4444/api/health
 ```
 
-Response:
+响应：
+
 ```json
 {
   "status": "healthy",
@@ -236,9 +237,9 @@ Response:
 }
 ```
 
-## Troubleshooting
+## 故障排查
 
-### View Logs
+### 查看日志
 
 ```bash
 # All services
@@ -254,7 +255,7 @@ docker compose logs app
 docker compose logs db
 ```
 
-### Database Access
+### 数据库访问
 
 ```bash
 # Connect to PostgreSQL
@@ -264,28 +265,28 @@ docker compose exec db psql -U prompts -d prompts
 docker compose exec db psql -U prompts -d prompts -c "SELECT COUNT(*) FROM \"Prompt\""
 ```
 
-### Container Shell
+### 容器 Shell
 
 ```bash
 docker compose exec app sh
 docker compose exec db bash
 ```
 
-### Common Issues
+### 常见问题
 
-**App container keeps restarting:**
-- Check logs: `docker compose logs app`
-- Database may not be ready yet -- the entrypoint retries for up to 60 seconds
+**应用容器反复重启：**
+- 查看日志：`docker compose logs app`
+- 数据库可能还没就绪——入口脚本会重试最多 60 秒
 
-**Database connection errors:**
-- Verify the `db` service is healthy: `docker compose ps`
-- Check database logs: `docker compose logs db`
+**数据库连接错误：**
+- 确认 `db` 服务健康：`docker compose ps`
+- 查看数据库日志：`docker compose logs db`
 
-**Authentication issues:**
-- Set `AUTH_SECRET` explicitly for production
-- For OAuth, verify callback URLs match your domain
+**认证问题：**
+- 生产环境要显式设置 `AUTH_SECRET`
+- 如果用了 OAuth，确认回调 URL 与你的域名匹配
 
-## Updating
+## 更新
 
 ```bash
 # If using pre-built images
@@ -298,11 +299,11 @@ docker compose build
 docker compose up -d
 ```
 
-Data persists in the `postgres_data` volume across updates.
+数据保存在 `postgres_data` 卷中，更新后依然保留。
 
-## Migrating from the Old Single-Image Setup
+## 从旧的单镜像部署迁移
 
-If you were using the previous all-in-one Docker image:
+如果你之前用的是一体式 Docker 镜像：
 
 ```bash
 # 1. Export your database from the old container
@@ -318,29 +319,29 @@ docker compose up -d
 docker compose exec -T db psql -U prompts prompts < backup.sql
 ```
 
-## Resource Requirements
+## 资源要求
 
-**Runtime** (after first build):
-- 1 CPU core
-- 1GB RAM
-- 2GB disk space
+**运行时**（首次构建之后）：
+- 1 CPU 核心
+- 1GB 内存
+- 2GB 磁盘空间
 
-**First-run build** (Next.js compilation on startup):
-- 1 CPU core
-- Higher memory required (OOM may occur with low limits)
-- 2GB disk space
+**首次构建**（启动时编译 Next.js）：
+- 1 CPU 核心
+- 需要更高内存（内存限制过低可能触发 OOM）
+- 2GB 磁盘空间
 
-> ⚠️ If you see `Killed` followed by `exited with code 137` during first startup,
-> your Docker container likely ran out of memory during the build step.
-> Increasing Docker's memory allocation (e.g., ~4GB or more) can help resolve this.
-> On Docker Desktop: Settings → Resources → Memory.
+> ⚠️ 如果首次启动时看到 `Killed` 后面跟着 `exited with code 137`，
+> 说明你的 Docker 容器很可能在构建阶段耗尽了内存。
+> 调高 Docker 的内存分配（例如 ~4GB 或更高）通常可以解决这个问题。
+> Docker Desktop：Settings → Resources → Memory。
 
-**Recommended for production:**
-- 2 CPU cores
-- 2GB RAM (runtime)
-- 10GB disk space
+**生产环境推荐：**
+- 2 CPU 核心
+- 2GB 内存（运行时）
+- 10GB 磁盘空间
 
-## Running Behind a Reverse Proxy
+## 反向代理
 
 ### Nginx
 
@@ -374,15 +375,15 @@ prompts.example.com {
 }
 ```
 
-## Security Considerations
+## 安全注意事项
 
-1. **Always set AUTH_SECRET** in production
-2. **Use HTTPS** -- put a reverse proxy (Nginx, Caddy, Traefik) in front
-3. **Change default database password** -- update `POSTGRES_PASSWORD` in compose.yml and the connection strings
-4. **Limit exposed ports** -- only expose what's needed
-5. **Regular updates** -- pull the latest image regularly
-6. **Backup data** -- regularly backup the database
+1. **生产环境务必设置 AUTH_SECRET**
+2. **使用 HTTPS** —— 在前面加一层反向代理（Nginx、Caddy、Traefik）
+3. **修改默认数据库密码** —— 更新 compose.yml 里的 `POSTGRES_PASSWORD` 和连接字符串
+4. **限制暴露的端口** —— 只暴露必要的端口
+5. **定期更新** —— 定期拉取最新镜像
+6. **备份数据** —— 定期备份数据库
 
-## License
+## 许可证
 
 MIT

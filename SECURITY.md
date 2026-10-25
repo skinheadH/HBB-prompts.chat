@@ -1,48 +1,43 @@
-# Security Policy
+# 安全政策
 
- ## Supported Versions
+ ## 受支持的版本
 
- | Version | Supported |
+ | 版本 | 是否支持 |
  |---------|-----------|
- | Latest  | Yes       |
+ | 最新版  | 是       |
 
- ## Reporting a Vulnerability
+ ## 报告漏洞
 
- If you discover a security vulnerability in HBB Prompts, please report it responsibly.
+ 如果你在 HBB Prompts 中发现安全漏洞，请负责任地报告。
 
- **Do NOT open a public GitHub issue for security vulnerabilities.**
+ **请不要为安全漏洞开设公开的 GitHub issue。**
 
- Instead, please use GitHub's private vulnerability reporting:
- **[Report a vulnerability](https://github.com/skinheadH/HBB-prompts.chat/security/advisories/new)**
+ 请改用 GitHub 的私有漏洞报告渠道：
+ **[报告漏洞](https://github.com/skinheadH/HBB-prompts.chat/security/advisories/new)**
 
- Include the following in your report:
+ 报告中请包含：
 
- - Description of the vulnerability
- - Steps to reproduce
- - Potential impact
- - Suggested fix (if any)
+ - 漏洞描述
+ - 复现步骤
+ - 潜在影响
+ - 建议的修复方案（如有）
 
- ## CVE Coordination
+ ## CVE 协调
 
- We coordinate the CVE identification and disclosure process with the GitHub Security team. Confirmed
-  vulnerabilities will be tracked through GitHub Security Advisories, and CVE IDs will be requested
- and assigned as appropriate.
+ 我们与 GitHub Security 团队协调 CVE 编号和披露流程。已确认的漏洞将通过 GitHub Security Advisories 跟踪，CVE 编号会按需申请和分配。
 
- ## Scope
- The following are **out of scope**:
+ ## 范围
+ 以下内容**不在范围内**：
 
- - Denial of service attacks
- - Social engineering
- - Issues in third-party dependencies (report these upstream)
- - Attacks requiring physical access
+ - 拒绝服务攻击
+ - 社会工程攻击
+ - 第三方依赖的问题（请向上游报告）
+ - 需要物理接触的攻击
 
- ## Disclosure Policy
+ ## 披露政策
 
- We ask that you give us reasonable time to address the issue before any public disclosure. We are
- committed to working with security researchers and will credit reporters (unless anonymity is
- preferred) once the issue is resolved.
+ 我们希望在任何公开披露之前，给我们合理的时间来处理问题。我们致力于与安全研究人员合作，问题解决后会为报告者署名（除非其希望匿名）。
 
- ## Thank You
+ ## 致谢
 
- We appreciate the security research community's efforts in helping keep HBB Prompts and its users
- safe.
+ 感谢安全研究社区为保障 HBB Prompts 及其用户安全所做的努力。

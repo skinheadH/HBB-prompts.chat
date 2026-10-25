@@ -1,61 +1,61 @@
-# Governance
+# 治理
 
-This document describes the governance model for HBB Prompts (forked from f/prompts.chat).
+本文档描述 HBB Prompts（fork 自 f/prompts.chat）的治理模型。
 
-## Overview
+## 概述
 
-HBB Prompts is an open-source project that welcomes contributions from anyone. The project operates with a small group of maintainers who are responsible for the overall direction, code review, and release process. We aim to grow this group over time and welcome new maintainers who demonstrate sustained, quality contributions.
+HBB Prompts 是一个开源项目，欢迎任何人做贡献。项目由一小群维护者运作，他们负责整体方向、代码审查和发布流程。我们希望逐步扩大这支队伍，欢迎能持续做出高质量贡献的新维护者加入。
 
-## Roles
+## 角色
 
-### Users
+### 用户
 
-Anyone who uses HBB Prompts, whether by browsing the website, self-hosting the platform, using the CLI, or integrating with the MCP server. Users are encouraged to file issues, suggest features, and contribute prompts.
+任何使用 HBB Prompts 的人，无论是浏览网站、自托管平台、使用 CLI，还是集成 MCP 服务器。鼓励用户提交 issue、提出功能建议和贡献提示词。
 
-### Contributors
+### 贡献者
 
-Anyone who contributes to the project. This includes submitting prompts through the web platform, opening pull requests, reporting bugs, improving documentation, or helping other users. All contributors are listed at https://github.com/skinheadH/HBB-prompts.chat/graphs/contributors.
+任何为项目做贡献的人，包括通过网页平台提交提示词、提交 PR、报告 bug、改进文档或帮助其他用户。所有贡献者都列在 https://github.com/skinheadH/HBB-prompts.chat/graphs/contributors。
 
-### Maintainers
+### 维护者
 
-People with commit access to the repository. Maintainers review and merge pull requests, triage issues, and participate in project decisions. The current list of maintainers is in [OWNERS.md](OWNERS.md).
+拥有仓库 commit 权限的人。维护者负责审查和合并 PR、分类处理 issue，并参与项目决策。当前维护者名单见 [OWNERS.md](OWNERS.md)。
 
-Maintainers are expected to:
-- Review pull requests in a timely manner
-- Help triage and respond to issues
-- Follow the project's code of conduct
-- Participate in governance discussions when they arise
+维护者需要：
+- 及时审查 PR
+- 协助分类处理并回复 issue
+- 遵守项目的行为准则
+- 出现治理讨论时参与其中
 
-### Project Lead
+### 项目负责人
 
-The project lead has final decision-making authority on project direction, releases, and governance changes. The project lead is responsible for ensuring the project stays aligned with its mission and the broader community's needs.
+项目负责人对项目方向、发布和治理变更拥有最终决策权。项目负责人负责确保项目始终与其使命和更广泛社区的需求保持一致。
 
-## Becoming a Maintainer
+## 如何成为维护者
 
-New maintainers are added based on sustained, high-quality contributions and demonstrated understanding of the project. There is no fixed checklist, but the following signals are considered:
+新增维护者基于持续的高质量贡献，以及展现出对项目的深入理解。没有固定清单，但会考量以下几项信号：
 
-- A track record of accepted pull requests over several months
-- Thoughtful code reviews on other people's contributions
-- Constructive participation in issue discussions
-- Reliability and follow-through on commitments
+- 数月来持续有 PR 被合并的记录
+- 能认真审查他人的贡献
+- 在 issue 讨论中建设性参与
+- 可靠，对承诺的事项有始有终
 
-Any existing maintainer can nominate a contributor for maintainer status. The nomination is discussed among the current maintainers, and the project lead makes the final decision. We are actively looking to grow the maintainer team, especially from contributors at different organizations.
+任何现有维护者都可以提名一位贡献者成为维护者。提名会在现任维护者中讨论，由项目负责人做最终决定。我们正在积极扩充维护者团队，尤其欢迎来自不同组织的贡献者。
 
-## Decision Making
+## 决策机制
 
-Most day-to-day decisions (bug fixes, small features, documentation updates) are made through the standard pull request review process. Any maintainer can approve and merge a PR.
+大多数日常决策（修复 bug、小功能、文档更新）通过标准的 PR 审查流程做出。任何维护者都可以批准并合并 PR。
 
-For larger decisions (new features with broad impact, architectural changes, governance changes, dependency additions), we use a "lazy consensus" approach:
+较大的决策（影响面广的新功能、架构变更、治理变更、新增依赖）采用“惰性共识”方式：
 
-1. A proposal is opened as a GitHub issue or discussion.
-2. The proposal is left open for at least 7 days to allow feedback.
-3. If there are no objections from maintainers, the proposal is accepted.
-4. If there are objections, the maintainers discuss and try to reach agreement. The project lead has final say if consensus cannot be reached.
+1. 以 GitHub issue 或 discussion 的形式提出提案。
+2. 提案保持开放至少 7 天，以收集反馈。
+3. 如果维护者没有反对意见，提案即被接受。
+4. 如果有反对意见，维护者会进行讨论并争取达成一致。无法达成共识时，由项目负责人最终定夺。
 
-## Changing This Document
+## 修改本文档
 
-Changes to this governance document follow the same decision-making process described above. Any maintainer or contributor can propose changes by opening a pull request.
+对本文档的修改遵循上述同样的决策流程。任何维护者或贡献者都可以通过提交 PR 提出修改。
 
-## Code of Conduct
+## 行为准则
 
-All participants in the project are expected to be respectful, constructive, and welcoming. We do not tolerate harassment, discrimination, or abusive behavior in any form. Violations can be reported to the project lead or through the channels listed in [SECURITY.md](SECURITY.md).
+项目所有参与者都应互相尊重、建设性交流、友好待人。我们不容忍任何形式的骚扰、歧视或辱骂行为。违规行为可以向项目负责人举报，或通过 [SECURITY.md](SECURITY.md) 中列出的渠道举报。

@@ -1,40 +1,40 @@
-# Contribution Guidelines
+# 贡献指南
 
-Thank you for your interest in contributing to HBB Prompts!
+感谢你有兴趣为 HBB Prompts 做贡献！
 
-## How to Contribute
+## 如何贡献
 
-This fork does not run the upstream prompts.chat web sync pipeline, so contributions go through standard GitHub flow:
+本 fork 不运行上游 prompts.chat 的网页同步流程，因此贡献走标准 GitHub 流程：
 
-1. Fork the repository
-2. Create a branch for your changes
-3. Submit a pull request with a descriptive title and explanation
+1. Fork 本仓库
+2. 为你的改动创建一个分支
+3. 提交 PR，标题和说明要清晰
 
-If you run your own instance with the web platform enabled, you can also submit prompts through your deployment's `/prompts/new` page — they are stored in your own database.
+如果你运行自己的实例并启用了网页平台，也可以通过你自己部署的 `/prompts/new` 页面提交提示词——它们会存放在你自己的数据库中。
 
-Your GitHub username will be credited as the contributor, and you'll appear in the repository's contributors list.
+你的 GitHub 用户名会署名记为贡献者，并出现在仓库的贡献者列表中。
 
-## Prompt Guidelines
+## 提示词规范
 
-When creating a new prompt:
+创建新提示词时：
 
-- **Test your prompt** - Ensure it generates intended results and can be used by others
-- **Be descriptive** - Give your prompt a clear, concise title
-- **Be original** - Don't submit duplicates of existing prompts
-- **Be appropriate** - Keep content suitable for all audiences
+- **先测试你的提示词** - 确保它能产出预期结果，别人也能使用
+- **描述要清晰** - 给提示词一个明确、简洁的标题
+- **保持原创** - 不要提交与现有提示词重复的内容
+- **内容要得体** - 保持内容适合所有受众
 
-## Direct Contributions
+## 直接贡献
 
-For bug fixes, documentation improvements, or other non-prompt contributions:
+修复 bug、改进文档或其他非提示词类的贡献：
 
-1. Fork the repository
-2. Create a branch for your changes
-3. Submit a pull request with a descriptive title and explanation
+1. Fork 本仓库
+2. 为你的改动创建一个分支
+3. 提交 PR，标题和说明要清晰
 
-## Questions & Issue Policy
+## 问题与 issue 政策
 
-Open an issue if you have questions about contributing.
+对贡献流程有疑问，请开一个 issue。
 
-**Important:** This repository is strictly for AI prompts.
-- Do **not** post advertisements.
-- Any off-topic issues will be closed immediately, and the posting user will be reported to GitHub for spam and malicious activity.
+**重要：** 本仓库只收 AI 提示词。
+- 不要发布广告。
+- 任何跑题的 issue 都会被立即关闭，发帖用户会被向 GitHub 举报发布垃圾信息和恶意行为。

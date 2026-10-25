@@ -11,11 +11,11 @@
 </h1>
 
 <p align="center">
-  <strong>The world's largest open-source prompt library for AI</strong><br>
-  <sub>Works with ChatGPT, Claude, Gemini, Llama, Mistral, and more</sub>
+  <strong>全球最大的开源 AI 提示词库</strong><br>
+  <sub>支持 ChatGPT、Claude、Gemini、Llama、Mistral 等</sub>
 </p>
 <p align="center">
-  <sub>Forked from <a href="https://github.com/f/prompts.chat">f/prompts.chat</a> (formerly Awesome ChatGPT Prompts), rebranded and maintained by HBB</sub>
+  <sub>Forked from <a href="https://github.com/f/prompts.chat">f/prompts.chat</a>（前身为 Awesome ChatGPT Prompts），由 HBB 改名并维护</sub>
 </p>
 
 <p align="center">
@@ -24,84 +24,84 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/skinheadH/HBB-prompts.chat/main/PROMPTS.md">📄 View Prompts on GitHub</a> •
-  <a href="#-self-hosting">🚀 Self-Host</a>
+  <a href="https://raw.githubusercontent.com/skinheadH/HBB-prompts.chat/main/PROMPTS.md">📄 在 GitHub 上查看提示词</a> •
+  <a href="#-自托管">🚀 自托管</a>
 </p>
 
 ---
 
-## What is this?
+## 这是什么？
 
-A curated collection of **prompts** for AI chat models. Originally created for ChatGPT, these prompts work great with any modern AI assistant.
+一份为 AI 聊天模型精选的**提示词**合集。最初为 ChatGPT 打造，同样适用于任何现代 AI 助手。
 
-| Browse Prompts | Data Formats |
+| 浏览提示词 | 数据格式 |
 |----------------|--------------|
-| Self-hosted instance (`/prompts`) | [prompts.csv](prompts.csv) |
-| [PROMPTS.md](https://raw.githubusercontent.com/skinheadH/HBB-prompts.chat/main/PROMPTS.md) | [Hugging Face Dataset](https://huggingface.co/datasets/fka/prompts.chat) (upstream) |
+| 自托管实例（`/prompts`） | [prompts.csv](prompts.csv) |
+| [PROMPTS.md](https://raw.githubusercontent.com/skinheadH/HBB-prompts.chat/main/PROMPTS.md) | [Hugging Face 数据集](https://huggingface.co/datasets/fka/prompts.chat)（上游） |
 
 ---
 
-## 📖 The Interactive Book of Prompting
+## 📖 交互式提示词手册
 
-Learn prompt engineering with a **free, interactive guide** — 29+ chapters covering everything from basics to advanced techniques like chain-of-thought reasoning, few-shot learning, and AI agents.
+通过这份**免费的交互式指南**学习提示词工程 —— 29 章以上，从基础到高级技巧全覆盖，包括思维链推理、少样本学习和 AI 智能体。
 
-Available locally at `/book` once the app is running. (Source: [src/content/book](src/content/book))
-
----
-
-## 🎮 Prompting for Kids
-
-An interactive, game-based adventure to teach children (ages 8-14) how to communicate with AI through fun puzzles and stories.
-
-Available locally at `/kids` once the app is running.
+应用启动后本地访问 `/book`。（源码：[src/content/book](src/content/book)）
 
 ---
 
-## 🚀 Self-Hosting
+## 🎮 少儿提示词
 
-Deploy your own private prompt library with custom branding, themes, and authentication.
+一个互动的游戏化冒险，通过有趣的谜题和故事，教 8-14 岁的孩子如何与 AI 沟通。
 
-**Quick Start (Docker):**
+应用启动后本地访问 `/kids`。
+
+---
+
+## 🚀 自托管
+
+部署属于你自己的私有提示词库，品牌定制、主题和身份验证均可自定义。
+
+**快速开始（Docker）：**
 ```bash
 git clone https://github.com/skinheadH/HBB-prompts.chat.git
 cd HBB-prompts.chat
 docker compose up -d --build
 ```
-Open http://localhost:4444.
+打开 http://localhost:4444。
 
-**Manual Setup:**
+**手动安装：**
 ```bash
 git clone https://github.com/skinheadH/HBB-prompts.chat.git
 cd HBB-prompts.chat
 npm install && npm run setup
 ```
 
-The setup wizard configures branding, theme, authentication (GitHub/Google/Azure AD), and features.
+安装向导会引导你配置品牌定制、主题、身份验证（GitHub/Google/Azure AD）和各项功能。
 
-**Requirements:** Node.js 24.x + PostgreSQL (see [SELF-HOSTING.md](SELF-HOSTING.md)).
+**环境要求：** Node.js 24.x + PostgreSQL（见 [SELF-HOSTING.md](SELF-HOSTING.md)）。
 
-📖 **[Full Self-Hosting Guide](SELF-HOSTING.md)** • 🐳 **[Docker Guide](DOCKER.md)**
+📖 **[完整自托管指南](SELF-HOSTING.md)** • 🐳 **[Docker 指南](DOCKER.md)**
 
 ---
 
-## 🔌 Integrations
+## 🔌 集成
 
 ### CLI
 ```bash
 npx prompts.chat
 ```
 
-### Claude Code Plugin
+### Claude Code 插件
 ```
 /plugin marketplace add skinheadH/HBB-prompts.chat
 /plugin install prompts.chat@prompts.chat
 ```
-📖 [Plugin Documentation](CLAUDE-PLUGIN.md)
+📖 [插件文档](CLAUDE-PLUGIN.md)
 
-### MCP Server
-Use your self-hosted instance as an MCP server in your AI tools.
+### MCP 服务器
+把你的自托管实例作为 MCP 服务器，接入你自己的 AI 工具。
 
-**Remote (recommended):**
+**远程（推荐）：**
 ```json
 {
   "mcpServers": {
@@ -112,7 +112,7 @@ Use your self-hosted instance as an MCP server in your AI tools.
 }
 ```
 
-**Local:**
+**本地：**
 ```json
 {
   "mcpServers": {
@@ -124,11 +124,11 @@ Use your self-hosted instance as an MCP server in your AI tools.
 }
 ```
 
-📖 [MCP Documentation](https://prompts.chat/docs/api) (upstream)
+📖 [MCP 文档](https://prompts.chat/docs/api)（上游）
 
 ---
 
-## 👥 Contributors
+## 👥 贡献者
 
 <a href="https://github.com/skinheadH/HBB-prompts.chat/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=skinheadH/HBB-prompts.chat" />
@@ -136,12 +136,12 @@ Use your self-hosted instance as an MCP server in your AI tools.
 
 ---
 
-## 📜 License
+## 📜 许可证
 
-This project is dual-licensed:
+本项目采用双重许可：
 
-- **Source code and site-authored content** is licensed under the [MIT License](LICENSE-MIT),
-  including the interactive book content in [`src/content/book`](src/content/book).
-- **Prompt content and data** (prompts.csv, PROMPTS.md, user-submitted prompts) is dedicated to the public domain under [CC0 1.0 Universal](LICENSE-CC0).
+- **源代码和站点原创内容**采用 [MIT License](LICENSE-MIT) 许可，
+  包括 [`src/content/book`](src/content/book) 中的交互式手册内容。
+- **提示词内容和数据**（prompts.csv、PROMPTS.md、用户提交的提示词）以 [CC0 1.0 Universal](LICENSE-CC0) 投入公共领域。
 
-See [LICENSE](LICENSE) for details.
+详见 [LICENSE](LICENSE)。

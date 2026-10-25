@@ -1,33 +1,33 @@
-# Claude Code Plugin
+# Claude Code 插件
 
-Access prompts.chat directly in [Claude Code](https://code.claude.com) with our official plugin. Search prompts, discover skills, and improve your prompts without leaving your IDE.
+通过官方插件在 [Claude Code](https://code.claude.com) 里直接访问 HBB Prompts。搜索提示词、发现技能、改进你的提示词，全程不用离开 IDE。
 
-## Installation
+## 安装
 
-Add the prompts.chat marketplace to Claude Code:
+把 prompts.chat marketplace 添加到 Claude Code：
 
 ```
 /plugin marketplace add skinheadH/HBB-prompts.chat
 ```
 
-Then install the plugin:
+然后安装插件：
 
 ```
 /plugin install prompts.chat@prompts.chat
 ```
 
-## Features
+## 功能
 
 | Feature | Description |
 |---------|-------------|
-| **MCP Server** | Connect to prompts.chat API for real-time prompt access |
-| **Commands** | `/prompts.chat:prompts` and `/prompts.chat:skills` slash commands |
-| **Agents** | Prompt Manager and Skill Manager agents for complex workflows |
-| **Skills** | Auto-activating skills for prompt and skill discovery |
+| **MCP Server** | 连接 HBB Prompts API，实时访问提示词 |
+| **Commands** | `/prompts.chat:prompts` 和 `/prompts.chat:skills` slash 命令 |
+| **Agents** | Prompt Manager 和 Skill Manager 代理，用于复杂工作流 |
+| **Skills** | 自动激活的技能，用于发现提示词和技能 |
 
-## Commands
+## 命令
 
-### Search Prompts
+### 搜索提示词
 
 ```
 /prompts.chat:prompts <query>
@@ -36,7 +36,8 @@ Then install the plugin:
 /prompts.chat:prompts <query> --tag productivity
 ```
 
-**Examples:**
+**示例：**
+
 ```
 /prompts.chat:prompts code review
 /prompts.chat:prompts writing assistant --category writing
@@ -44,7 +45,7 @@ Then install the plugin:
 /prompts.chat:prompts react developer --tag coding
 ```
 
-### Search Skills
+### 搜索技能
 
 ```
 /prompts.chat:skills <query>
@@ -52,94 +53,95 @@ Then install the plugin:
 /prompts.chat:skills <query> --tag automation
 ```
 
-**Examples:**
+**示例：**
+
 ```
 /prompts.chat:skills testing automation
 /prompts.chat:skills documentation --category coding
 /prompts.chat:skills api integration
 ```
 
-## MCP Tools
+## MCP 工具
 
-The plugin provides these tools via the prompts.chat MCP server:
+该插件通过 HBB Prompts MCP 服务器提供以下工具：
 
-### Prompt Tools
-
-| Tool | Description |
-|------|-------------|
-| `search_prompts` | Search prompts by keyword, category, tag, or type |
-| `get_prompt` | Retrieve a prompt with variable substitution |
-| `save_prompt` | Save a new prompt (requires API key) |
-| `improve_prompt` | Enhance prompts using AI |
-
-### Skill Tools
+### 提示词工具
 
 | Tool | Description |
 |------|-------------|
-| `search_skills` | Search for Agent Skills |
-| `get_skill` | Get a skill with all its files |
-| `save_skill` | Create multi-file skills (requires API key) |
-| `add_file_to_skill` | Add a file to an existing skill |
-| `update_skill_file` | Update a file in a skill |
-| `remove_file_from_skill` | Remove a file from a skill |
+| `search_prompts` | 按关键词、分类、标签或类型搜索提示词 |
+| `get_prompt` | 获取提示词并做变量替换 |
+| `save_prompt` | 保存新提示词（需要 API key） |
+| `improve_prompt` | 用 AI 改进提示词 |
 
-## Agents
+### 技能工具
+
+| Tool | Description |
+|------|-------------|
+| `search_skills` | 搜索 Agent Skills |
+| `get_skill` | 获取技能及其所有文件 |
+| `save_skill` | 创建多文件技能（需要 API key） |
+| `add_file_to_skill` | 向已有技能添加文件 |
+| `update_skill_file` | 更新技能中的文件 |
+| `remove_file_from_skill` | 从技能中删除文件 |
+
+## 代理
 
 ### Prompt Manager
 
-The `prompt-manager` agent helps you:
-- Search for prompts across prompts.chat
-- Get and fill prompt variables
-- Save new prompts to your account
-- Improve prompts using AI
+`prompt-manager` 代理可以帮你：
+- 在 HBB Prompts 上搜索提示词
+- 获取并填充提示词变量
+- 把新提示词保存到你的账户
+- 用 AI 改进提示词
 
 ### Skill Manager
 
-The `skill-manager` agent helps you:
-- Search for Agent Skills
-- Get and install skills to your workspace
-- Create new skills with multiple files
-- Manage skill file contents
+`skill-manager` 代理可以帮你：
+- 搜索 Agent Skills
+- 获取并把技能安装到你的工作区
+- 创建包含多个文件的新技能
+- 管理技能文件内容
 
-## Skills (Auto-Activating)
+## 技能（自动激活）
 
-### Prompt Lookup
+### 提示词查找
 
-Automatically activates when you:
-- Ask for prompt templates
-- Want to search for prompts
-- Need to improve a prompt
-- Mention prompts.chat
+在以下情况自动激活：
+- 索取提示词模板
+- 想搜索提示词
+- 需要改进某个提示词
+- 提到 HBB Prompts
 
-### Skill Lookup
+### 技能查找
 
-Automatically activates when you:
-- Ask for Agent Skills
-- Want to extend Claude's capabilities
-- Need to install a skill
-- Mention skills for Claude
+在以下情况自动激活：
+- 索取 Agent Skills
+- 想扩展 Claude 的能力
+- 需要安装技能
+- 提到 Claude 的技能
 
-## Authentication
+## 认证
 
-To save prompts and skills, you need an API key from [prompts.chat/settings](https://prompts.chat/settings).
+要保存提示词和技能，你需要从 [prompts.chat/settings](https://prompts.chat/settings) 获取 API key。
 
-### Option 1: Environment Variable
+### 选项 1：环境变量
 
-Set the `PROMPTS_API_KEY` environment variable:
+设置 `PROMPTS_API_KEY` 环境变量：
 
 ```bash
 export PROMPTS_API_KEY=your_api_key_here
 ```
 
-### Option 2: MCP Header
+### 选项 2：MCP Header
 
-Add the header when connecting to the MCP server:
+连接 MCP 服务器时带上该 header：
 
 ```
 PROMPTS_API_KEY: your_api_key_here
 ```
 
-## Plugin Structure
+## 插件结构
 
 ```
 plugins/claude/prompts.chat/
@@ -159,8 +161,8 @@ plugins/claude/prompts.chat/
         └── SKILL.md         # Skill discovery skill
 ```
 
-## Links
+## 链接
 
-- **[prompts.chat](https://prompts.chat)** - Browse all prompts and skills
-- **[API Documentation](https://prompts.chat/api/mcp)** - MCP server endpoint
-- **[Settings](https://prompts.chat/settings)** - Get your API key
+- **[HBB Prompts](https://prompts.chat)** - 浏览所有提示词和技能
+- **[API Documentation](https://prompts.chat/api/mcp)** - MCP 服务器端点
+- **[Settings](https://prompts.chat/settings)** - 获取你的 API key
